@@ -1,9 +1,25 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-10-17T12:18:02Z",
-  "last_successful_collection": "2026-10-17T11:47:57Z",
+  "generated_at": "2026-10-17T12:36:24Z",
+  "last_successful_collection": "2026-10-17T12:36:23Z",
   "collection_status": "success",
+  "sources_succeeded": 2,
+  "sources_total": 2,
+  "source_results": [
+    {
+      "source_id": "nature_aging",
+      "status": "success",
+      "fetched": 8,
+      "new": 0
+    },
+    {
+      "source_id": "pubmed_longevity",
+      "status": "success",
+      "fetched": 50,
+      "new": 0
+    }
+  ],
   "items": [
     {
       "item_id": "c3b99a6899ee83962fd0b54bb070657ef32d51669b64a581a0a4dd6ad536ede3",
