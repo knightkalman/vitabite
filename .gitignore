@@ -1,2 +1,4 @@
 __pycache__/
 *.py[cod]
+.longevity-news-state/
+news/permitted-content.json

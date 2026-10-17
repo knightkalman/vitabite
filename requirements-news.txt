@@ -1,0 +1,2 @@
+google-antigravity==0.1.22
+jsonschema==4.26.0

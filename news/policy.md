@@ -51,14 +51,14 @@ explicit response schema. The selected integration, model, accepted schema
 mechanism, rate limits, costs, and retention obligations must be re-verified
 against the deployed account and current terms before Step 3 is enabled.
 
-**Important deployment qualification:** this checkout has neither the
-Antigravity CLI/SDK installed nor an Antigravity API credential, so an
-authenticated integration test in the target GitHub Actions environment has
-not been performed. This is sufficient to choose an officially documented
-unattended integration path, but it is not evidence that a production secret,
-quota, or billing setup is configured. Keep summarization disabled until a
-maintainer provisions an API key as a GitHub Actions secret, verifies access
-and billing, runs a schema-validated test in Actions, and reviews the
+**Important deployment qualification:** Step 3 now pins the official
+Antigravity Python SDK for a local/programmatic summarizer. This checkout has
+no Antigravity API credential, and an authenticated integration test in the
+target GitHub Actions environment has not been performed. The code and SDK
+structured-output support are not evidence that a production secret, quota,
+billing, source-processing basis, or GitHub-hosted runtime is configured.
+Keep unattended summarization disabled until a maintainer verifies those
+items, runs a schema-validated test in the target runtime, and reviews the
 provider's current data terms. Never store a key in this repository or in a
 public artifact.
 
@@ -136,6 +136,18 @@ paywalls, authentication, robots restrictions, source quotas, or technical
 access controls. A future summarizer must separately confirm its access and
 processing basis and publish only original, concise summaries with prominent
 source attribution and links.
+
+The Step 3 summarizer accepts an optional, separate private content bundle.
+Every entry is schema-validated and must identify the exact candidate and
+source URL, attest `processing_authorized: true`, and name a basis
+(`licensed_excerpt`, `public_domain`, or `publisher_permission`). This is an
+operator assertion, not automated legal verification. Candidates without
+such text remain `needs_review` and receive no headline-derived summary. The
+Antigravity agent has its tools disabled and receives only the candidate
+metadata and authorized text. Its output and source-paragraph references are
+validated against the versioned schema; persistent audit records contain a
+text hash, not the supplied source material. Generated records remain private
+and are not published or merged into collector state.
 
 `candidate` is not an approval state. Collector state remains private in the
 workflow artifact. Only the selected metadata fields from the current

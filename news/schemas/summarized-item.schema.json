@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VitaBite longevity-news summary record",
+  "description": "Private summarizer output; not itself a public feed or editorial approval.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "item_id",
+    "source_id",
+    "title",
+    "publisher",
+    "author",
+    "source_url",
+    "publication_date",
+    "publication_date_precision",
+    "publication_date_raw",
+    "category",
+    "tags",
+    "summary",
+    "key_points",
+    "evidence_notes",
+    "confidence",
+    "risk_flags",
+    "editorial_status",
+    "editorial_reasons",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "item_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    },
+    "author": {
+      "type": ["string", "null"],
+      "maxLength": 250
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "publication_date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "publication_date_precision": {
+      "enum": ["day", "month", "year", "unknown"]
+    },
+    "publication_date_raw": {
+      "type": ["string", "null"],
+      "maxLength": 80
+    },
+    "category": {
+      "enum": ["scientific", "consumer_goods", "nutrients", "medication"]
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]{0,49}$"
+      }
+    },
+    "summary": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "key_points": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["text", "source_paragraphs"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "source_paragraphs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_notes": {
+      "type": ["string", "null"],
+      "maxLength": 300
+    },
+    "confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "risk_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "promotional_claim",
+          "preliminary_evidence",
+          "preprint",
+          "animal_or_in_vitro",
+          "conflicting_evidence",
+          "potential_medical_advice",
+          "inaccessible_source"
+        ]
+      }
+    },
+    "editorial_status": {
+      "enum": ["approved", "needs_review", "withheld"]
+    },
+    "editorial_reasons": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "integration",
+        "sdk_version",
+        "model",
+        "prompt_version",
+        "run_id",
+        "summarized_at",
+        "source_material_sha256",
+        "source_material_basis"
+      ],
+      "properties": {
+        "integration": {
+          "const": "google-antigravity-python-sdk"
+        },
+        "sdk_version": {
+          "type": ["string", "null"]
+        },
+        "model": {
+          "type": ["string", "null"]
+        },
+        "prompt_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "summarized_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_material_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_material_basis": {
+          "enum": [
+            "licensed_excerpt",
+            "public_domain",
+            "publisher_permission",
+            null
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "editorial_status": {
+            "const": "approved"
+          }
+        },
+        "required": ["editorial_status"]
+      },
+      "then": {
+        "properties": {
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "key_points": {
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0.65
+          },
+          "category": {
+            "not": {
+              "const": "medication"
+            }
+          },
+          "risk_flags": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "summary": {
+            "const": null
+          }
+        },
+        "required": ["summary"]
+      },
+      "then": {
+        "properties": {
+          "editorial_status": {
+            "enum": ["needs_review", "withheld"]
+          },
+          "confidence": {
+            "type": "null"
+          },
+          "key_points": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

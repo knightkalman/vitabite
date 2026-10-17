@@ -46,7 +46,40 @@ source-linked headlines from the latest successful collection. They are
 explicitly labeled as unreviewed metadata candidates: categories and tags are
 provisional, and no article summaries are generated. Future successful
 background collection runs update this headline-only roundup automatically.
-Antigravity summaries and editorial review remain future work.
+
+### Antigravity summaries
+
+The Step 3 summarizer is a separate manual operation. It processes only
+article text supplied in a private bundle with explicit processing
+authorization and a matching source URL. Current candidates contain metadata
+only, so without that bundle they remain `needs_review` and receive no
+headline-derived summary. Do not fetch or send article text to Google unless
+the source's terms or explicit permission allow that processing.
+
+Install `requirements-news.txt` and create a private JSON input bundle
+conforming to [`permitted-content.schema.json`](news/schemas/permitted-content.schema.json).
+Each entry needs `processing_authorized: true`, an `authorization_basis`
+(`licensed_excerpt`, `public_domain`, or `publisher_permission`), and the
+exact candidate `item_id` and `source_url`, plus text of at most 30,000
+characters. Keep this bundle outside Git. Then run:
+
+```sh
+ANTIGRAVITY_API_KEY=... python3 -m news.summarizer \
+  --candidates /path/to/candidates.json \
+  --content /private/path/permitted-content.json \
+  --output /private/path/summaries.json \
+  --audit /private/path/summarizer-audit.jsonl \
+  --run-id local
+```
+
+The Antigravity SDK is configured with agent tools disabled. Output is
+validated against the versioned summary schema and key points cite numbered
+source paragraphs; audit records retain hashes and decisions, not the source
+text. Medication, low-confidence, preliminary, promotional, conflicting, and
+other flagged items require human review. Summary output remains private and
+does not update or publish `/news/`. The SDK path has not yet been
+authenticated or verified in GitHub Actions, so unattended summarization is
+not enabled.
 
 ## Publish with GitHub Pages
 

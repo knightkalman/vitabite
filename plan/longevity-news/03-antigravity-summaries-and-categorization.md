@@ -1,5 +1,12 @@
 # Step 3: Summarize and categorize with Antigravity
 
+> **Implementation status:** The schema-validated local summarizer and tests
+> are implemented in `news/summarizer.py`. It accepts only a private,
+> explicitly authorized source-text bundle and writes private summary records;
+> it does not publish them. No provider credential is configured, no
+> authenticated run has been verified in GitHub Actions, and the current
+> metadata-only collector output is not sufficient evidence for summaries.
+
 ## Goal
 
 Use the approved Antigravity agent integration to turn collected candidates
@@ -61,6 +68,18 @@ item for review or withhold it instead of fabricating a summary.
   never silently published.
 - If Antigravity becomes unavailable, the run fails visibly or leaves items
   queued; it does not produce success-shaped fabricated summaries.
+
+## Remaining verification before Step 4
+
+- Confirm source-specific permission and Google data-processing terms for each
+  text bundle; the bundle's authorization flag is an operator attestation, not
+  a legal or licensing check.
+- Configure the API credential outside source control and verify the SDK's
+  structured-output call in the intended scheduled runtime.
+- Review representative model outputs against the source text before using
+  `approved` output for any publication workflow. The current collector
+  provides metadata only, so it cannot by itself satisfy the source-grounding
+  acceptance criteria.
 
 ## Handoff
 

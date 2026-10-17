@@ -28,10 +28,16 @@ acceptance criteria, and handoff.
   explicitly unreviewed metadata roundup. No summaries are generated, and
   future successful collector runs update the metadata roundup automatically.
 - Antigravity's official unattended/programmatic route and structured-output
-  SDK are documented, but there is no API secret configured or authenticated
-  GitHub Actions test yet. Configure and verify that before Step 3.
-- Summaries and editorial approval are not implemented yet. The collector's
-  scheduled workflow republishes the source-metadata roundup automatically.
+  SDK are documented. Step 3's local summarizer, strict output schema,
+  authorization-gated input bundle, and safety tests are implemented, but no
+  API secret is configured and the SDK has not been authenticated or tested
+  in GitHub Actions.
+- The current collector supplies metadata only. Without separately supplied
+  article text with an authorized processing basis, candidates remain
+  `needs_review` and are never summarized from headlines.
+- Generated summaries are private and do not update the public metadata
+  roundup. Step 4 still needs to integrate and validate an editorially approved
+  feed; the scheduled collector continues to update the headline roundup.
 
 ## Plan files
 
