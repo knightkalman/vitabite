@@ -17,7 +17,8 @@
     "publication_status": {
       "enum": [
         "editorial_pipeline_pending",
-        "live"
+        "live",
+        "metadata_roundup"
       ]
     },
     "generated_at": {
@@ -134,7 +135,10 @@
           }
         },
         "summary": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "minLength": 1,
           "maxLength": 1200
         },
@@ -146,10 +150,103 @@
           "maxLength": 800
         },
         "review_state": {
-          "const": "approved"
+          "enum": [
+            "approved",
+            "candidate"
+          ]
         }
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "review_state": {
+                "const": "candidate"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "summary": {
+                "type": "null"
+              },
+              "evidence_notes": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "review_state": {
+                "const": "approved"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "publication_status": {
+            "const": "metadata_roundup"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "items": {
+            "items": {
+              "properties": {
+                "review_state": {
+                  "const": "candidate"
+                },
+                "summary": {
+                  "type": "null"
+                },
+                "evidence_notes": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "publication_status": {
+            "const": "live"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "items": {
+            "items": {
+              "properties": {
+                "review_state": {
+                  "const": "approved"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

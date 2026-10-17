@@ -1,10 +1,10 @@
 # Step 4: Build the news subpage and link it from VitaBite
 
 > **Implementation status:** The static `/news/` preview page and homepage
-> navigation link are implemented under `public/news/`. The public feed
-> contains no approved articles yet: the collector stores candidates in
-> workflow artifacts, while Antigravity summarization and editorial approval
-> remain unimplemented.
+> navigation link are implemented under `public/news/`. Per the owner's
+> request, the public feed lists all 58 headlines from the latest successful
+> collector run as unreviewed source metadata. Antigravity summarization and
+> human editorial review remain unimplemented.
 
 ## Goal
 
@@ -13,9 +13,10 @@ linked from the existing VitaBite website and deploy it on GitHub Pages.
 
 ## Prerequisite
 
-Complete [Step 3](./03-antigravity-summaries-and-categorization.md). Use
-approved, validated records and the data-publication architecture defined in
-Step 1. Do not display candidate or rejected items.
+Complete [Step 3](./03-antigravity-summaries-and-categorization.md) for
+summarized editorial content. The current owner-authorized metadata roundup
+can display validated candidate headlines, but it must identify them as
+unreviewed and must not imply that categories are confirmed or summaries exist.
 
 ## Agent instructions
 
@@ -33,8 +34,9 @@ approved one.
 - Add a visible **Longevity news** link in the main website navigation so
   readers can reach the subpage.
 - Render titles, source/publisher, publication date, collection/update date
-  where useful, category, tags, concise summary, evidence caveat, and a clear
-  link to the original article.
+  where useful, provisional category and tags, and a clear link to the
+  original article. Show summaries and evidence notes only when they exist and
+  are editorially approved.
 - Provide category filters for scientific research, consumer goods,
   nutrients, and medication. Filters must remain understandable and usable
   without a mouse; use semantic controls and update accessible status where
@@ -58,15 +60,16 @@ approved one.
   layouts are tested.
 - Keyboard navigation, semantic landmarks/headings, contrast, and screen-reader
   labels follow the existing site's accessibility conventions.
-- Only approved records render; original sources remain clearly attributed and
-  linked.
+- Metadata-only candidates are visibly identified as unreviewed; original
+  sources remain clearly attributed and linked. Future summaries require
+  approved records.
 - Existing homepage content, assets, and GitHub Pages deployment continue to
   work.
 
 ## Handoff
 
-Before calling this step fully complete, implement a controlled process to
-transfer reviewed and approved summaries into `public/news/news.json`. Keep
-collector candidates private and keep all non-approved items out of the Pages
-artifact. Proceed to [Step 5](./05-operations-and-launch.md) after that
-publication flow and the Pages deployment are verified end to end.
+Before adding summaries, implement a controlled review and publication process
+for generated content. The current metadata-roundup snapshot does not
+automatically update when subsequent private collector artifacts are created.
+Proceed to [Step 5](./05-operations-and-launch.md) after the publication
+policy and Pages deployment are verified end to end.

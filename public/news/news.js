@@ -81,18 +81,18 @@ function renderStories() {
   if (visibleStories.length === 0) {
     if (stories.length === 0) {
       setFeedMessage({
-        label: "A thoughtful start",
-        heading: "Stories will find their place here.",
+        label: "A considered collection",
+        heading: "No collected headlines are available.",
         description:
-          "Once the summary and editorial review stages are connected, this space will share concise, source-linked longevity news. Until then, there are no approved articles to display.",
-        foot: "NO APPROVED STORIES YET",
+          "The last collection may not have produced records. Check the source and run status before treating this as an empty news day.",
+        foot: "NO SOURCE RECORDS IN THIS FEED",
       });
     } else {
       setFeedMessage({
         label: "A quieter corner",
         heading: "No stories in this category yet.",
         description:
-          "Try another topic to browse the approved stories currently in the collection.",
+          "Try another topic to browse the source headlines currently in the collection.",
         foot: CATEGORY_LABELS[selectedCategory]?.toUpperCase() ?? "NO STORIES",
       });
     }
@@ -106,6 +106,7 @@ function renderStories() {
         return "";
       }
       const tags = (story.tags ?? [])
+        .filter((tag) => tag !== "needs_review" && tag !== story.category)
         .map((tag) => `<span class="story-tag">${escapeHtml(tag.replaceAll("_", " "))}</span>`)
         .join("");
       const author = story.author
@@ -119,18 +120,24 @@ function renderStories() {
         story.publication_date_precision,
         story.publication_date_raw,
       );
+      const isCandidate = story.review_state === "candidate";
+      const summary = isCandidate
+        ? "Source headline only. No summary or editorial review has been provided."
+        : story.summary;
+      const categoryLabel = `${isCandidate ? "Provisional · " : ""}${CATEGORY_LABELS[story.category] ?? "News"}`;
 
       return `
         <article class="story-card">
           <div class="story-meta">
-            <span class="story-category">${escapeHtml(CATEGORY_LABELS[story.category] ?? "News")}</span>
+            <span class="story-category">${escapeHtml(categoryLabel)}</span>
             <span>${escapeHtml(publicationDate)}</span>
             <span>${escapeHtml(story.publisher)}</span>
             ${author}
           </div>
           <div>
             <h3>${escapeHtml(story.title)}</h3>
-            <p class="story-summary">${escapeHtml(story.summary)}</p>
+            ${isCandidate ? '<p class="story-review-label">Unreviewed source headline</p>' : ""}
+            <p class="story-summary">${escapeHtml(summary)}</p>
             ${evidence}
             <div class="story-tags" aria-label="Story tags">${tags}</div>
             <a class="source-link" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">
@@ -183,7 +190,7 @@ async function loadFeed() {
     if (
       feed.schema_version !== 1 ||
       !Array.isArray(feed.items) ||
-      !["editorial_pipeline_pending", "live"].includes(feed.publication_status)
+      !["editorial_pipeline_pending", "live", "metadata_roundup"].includes(feed.publication_status)
     ) {
       throw new Error("Feed metadata does not match the expected public schema");
     }
@@ -191,9 +198,10 @@ async function loadFeed() {
     updateFreshness(feed);
     stories = feed.items.filter(
       (story) =>
-        story.review_state === "approved" &&
-        typeof story.summary === "string" &&
-        story.summary.trim() &&
+        (story.review_state === "candidate" ||
+          (story.review_state === "approved" &&
+            typeof story.summary === "string" &&
+            story.summary.trim())) &&
         typeof story.title === "string" &&
         typeof story.publisher === "string" &&
         Array.isArray(story.tags) &&

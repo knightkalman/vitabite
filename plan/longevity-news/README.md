@@ -23,14 +23,15 @@ acceptance criteria, and handoff.
   rolling candidate-state artifact. The schedule will become active after the
   workflow is pushed to the default branch.
 - A `/news/` preview is implemented and linked from the VitaBite homepage. It
-  intentionally displays no stories because candidate collection is not yet
-  connected to Antigravity summarization, editorial approval, or public-feed
-  publication.
+  publishes all 58 headlines from the latest successful collector run as an
+  explicitly unreviewed metadata roundup. No summaries are generated, and
+  future collector runs do not automatically publish.
 - Antigravity's official unattended/programmatic route and structured-output
   SDK are documented, but there is no API secret configured or authenticated
   GitHub Actions test yet. Configure and verify that before Step 3.
-- No summaries or news webpage are implemented yet; candidates are not
-  published to GitHub Pages.
+- Summaries and editorial approval are not implemented yet. The current
+  source-metadata roundup is live on GitHub Pages, but subsequent collector
+  artifacts do not automatically update it.
 
 ## Plan files
 

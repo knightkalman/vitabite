@@ -4,12 +4,21 @@
 
 The VitaBite website remains a static GitHub Pages site. A GitHub Actions
 workflow runs the collector daily in **UTC** and on authorized manual
-dispatches. It stores source-linked candidate metadata in a private-to-the-
-repository Actions artifact, separate from the website. The artifact is
-retained for 90 days; candidate records themselves expire after 30 days.
-Collection never writes into `public/`, deploys Pages, or marks a candidate as
-reviewed. The later editorial/summarization and site-integration steps must
-publish a separately validated, approved feed.
+dispatches. Collector runs store source-linked candidate metadata in a
+private-to-the-repository Actions artifact, separate from the website. The
+artifact is retained for 90 days; candidate records themselves expire after
+30 days.
+
+**Publication mode selected on 2026-10-17:** the project owner requested that
+all items from the latest successful collector run be made live. Therefore the
+static news page publishes the collected title, source/publisher, source link,
+publication-date metadata, and provisional category/tags as an explicitly
+**unreviewed metadata roundup**. It does not publish article bodies, generated
+summaries, or claims of editorial/clinical review. The current 58-item snapshot
+does not automatically refresh from subsequent private workflow artifacts.
+Until a separate reviewed publication workflow exists, a maintainer must
+update the static feed deliberately from a successful, schema-validated
+collector run.
 
 Scheduled workflows can be delayed or disabled by GitHub, so the page must
 eventually report actual last-successful collection time rather than imply
@@ -128,10 +137,15 @@ access controls. A future summarizer must separately confirm its access and
 processing basis and publish only original, concise summaries with prominent
 source attribution and links.
 
-`candidate` is not an approval state. Candidate JSON exists only in the
-workflow artifact; it is never placed in the Pages upload. Any malformed,
-off-domain, stale, or unlicensed record is rejected or retained only as an
-explicit source failure, not made publishable.
+`candidate` is not an approval state. Collector state remains private in the
+workflow artifact. Only the selected metadata fields from the current
+successful run are copied to the public feed; there they remain marked
+`candidate`, `summary` and `evidence_notes` stay null, and the UI says that
+the records and classifications are not reviewed. No malformed, off-domain,
+stale, duplicate, or disabled-source record is eligible for this roundup.
+This owner-authorized metadata publication mode does not constitute editorial
+approval. Future generated summaries must use a separately approved process
+and must never be inferred from headlines.
 
 ## Dedupe, retention, freshness, corrections, and takedowns
 
@@ -145,8 +159,9 @@ explicit source failure, not made publishable.
 - Each run reports its timestamp and each source's success, count, and
   failure. An all-source failure fails the job; a partial failure is clearly
   reported and does not erase candidates from successful sources.
-- A later public page must show its real last-successful run and stale/error
-  state. A collector run is not proof that every source succeeded.
+- The public page shows the timestamp of the published snapshot's last
+  successful collection and flags it as stale after three days. A later
+  private collector run is not proof that the public snapshot was updated.
 - Maintainers must be able to correct an item, disable a source, and remove a
   candidate/public item on request. Record the decision in the review history;
   do not republish a withdrawn or corrected item from an older artifact.
