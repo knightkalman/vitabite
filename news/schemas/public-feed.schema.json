@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VitaBite public longevity-news feed",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "publication_status",
+    "generated_at",
+    "last_successful_collection",
+    "collection_status",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "publication_status": {
+      "enum": [
+        "editorial_pipeline_pending",
+        "live"
+      ]
+    },
+    "generated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "last_successful_collection": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "collection_status": {
+      "enum": [
+        "not_connected_to_publication",
+        "success",
+        "partial",
+        "failed"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/story"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "story": {
+      "type": "object",
+      "required": [
+        "item_id",
+        "title",
+        "publisher",
+        "author",
+        "source_url",
+        "publication_date",
+        "publication_date_precision",
+        "publication_date_raw",
+        "category",
+        "tags",
+        "summary",
+        "evidence_notes",
+        "review_state"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 250
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 250
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "publication_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "publication_date_precision": {
+          "enum": [
+            "day",
+            "month",
+            "year",
+            "unknown"
+          ]
+        },
+        "publication_date_raw": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 80
+        },
+        "category": {
+          "enum": [
+            "scientific",
+            "consumer_goods",
+            "nutrients",
+            "medication"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "maxLength": 50
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "evidence_notes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 800
+        },
+        "review_state": {
+          "const": "approved"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

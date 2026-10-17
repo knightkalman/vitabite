@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VitaBite longevity news source registry",
+  "type": "object",
+  "required": [
+    "registry_version",
+    "sources"
+  ],
+  "properties": {
+    "registry_version": {
+      "const": 1
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "name",
+        "publisher",
+        "feed_url",
+        "source_type",
+        "format",
+        "allowed_domains",
+        "topic_coverage",
+        "update_cadence",
+        "permitted_collection_method",
+        "terms_notes",
+        "terms_url",
+        "trust_tier",
+        "enabled",
+        "last_checked_date"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "feed_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "source_type": {
+          "enum": [
+            "rss",
+            "pubmed_eutils"
+          ]
+        },
+        "format": {
+          "enum": [
+            "rss1",
+            "rss2",
+            "json"
+          ]
+        },
+        "allowed_domains": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "query": {
+          "type": "string"
+        },
+        "filter_terms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "date_window_days": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 90
+        },
+        "max_results": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "topic_coverage": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "update_cadence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "permitted_collection_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "terms_notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "terms_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "trust_tier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "last_checked_date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "const": "rss"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "format": {
+                "enum": [
+                  "rss1",
+                  "rss2"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "const": "pubmed_eutils"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "query",
+              "date_window_days",
+              "max_results"
+            ],
+            "properties": {
+              "format": {
+                "const": "json"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

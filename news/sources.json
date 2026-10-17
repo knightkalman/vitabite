@@ -1,0 +1,96 @@
+{
+  "registry_version": 1,
+  "sources": [
+    {
+      "source_id": "nature_aging",
+      "name": "Nature Aging",
+      "publisher": "Springer Nature",
+      "feed_url": "https://www.nature.com/nataging.rss",
+      "source_type": "rss",
+      "format": "rss1",
+      "allowed_domains": [
+        "nature.com"
+      ],
+      "topic_coverage": [
+        "aging research",
+        "longevity science",
+        "healthy aging"
+      ],
+      "update_cadence": "continuous; checked daily",
+      "permitted_collection_method": "Fetch the publisher-provided public RSS feed and retain article metadata only.",
+      "terms_notes": "The feed includes a Springer Nature copyright notice. Preserve attribution, use article links and metadata only, and review current Springer Nature site terms before expanding collection or reusing content.",
+      "terms_url": "https://www.nature.com/info/terms-and-conditions",
+      "trust_tier": "primary_publisher",
+      "enabled": true,
+      "last_checked_date": "2026-10-17"
+    },
+    {
+      "source_id": "food_business_news",
+      "name": "Food Business News",
+      "publisher": "Sosland Publishing",
+      "feed_url": "https://www.foodbusinessnews.net/rss/articles",
+      "source_type": "rss",
+      "format": "rss2",
+      "allowed_domains": [
+        "foodbusinessnews.net"
+      ],
+      "filter_terms": [
+        "longevity",
+        "healthspan",
+        "healthy aging",
+        "healthy ageing",
+        "anti-aging",
+        "anti ageing",
+        "aging",
+        "ageing",
+        "supplement",
+        "nutraceutical",
+        "vitamin",
+        "creatine",
+        "probiotic",
+        "protein"
+      ],
+      "topic_coverage": [
+        "consumer food goods",
+        "functional foods",
+        "dietary supplements",
+        "food industry"
+      ],
+      "update_cadence": "continuous; checked daily",
+      "permitted_collection_method": "Fetch the publisher-provided public RSS feed and retain only matching article metadata.",
+      "terms_notes": "The feed is reachable, but the linked terms page returned HTTP 403 during the 2026-10-17 check. Terms and collection/reuse permission are not verified; keep this source disabled until a maintainer can review them.",
+      "terms_url": "https://www.foodbusinessnews.net/terms-of-use",
+      "trust_tier": "specialist_trade_publisher",
+      "enabled": false,
+      "last_checked_date": "2026-10-17"
+    },
+    {
+      "source_id": "pubmed_longevity",
+      "name": "PubMed Longevity Search",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "query": "(longevity[Title/Abstract] OR healthspan[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR \"biological age\"[Title/Abstract] OR aging[Title/Abstract] OR ageing[Title/Abstract])",
+      "date_window_days": 30,
+      "max_results": 50,
+      "topic_coverage": [
+        "peer-reviewed research",
+        "clinical studies",
+        "nutrients",
+        "medication",
+        "aging research"
+      ],
+      "update_cadence": "continuous; checked daily with an overlapping 30-day search window",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-17"
+    }
+  ]
+}

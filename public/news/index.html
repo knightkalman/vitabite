@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5ef">
+    <meta
+      name="description"
+      content="A thoughtful, source-led preview of VitaBite AI's planned longevity news service."
+    >
+    <title>Longevity news — VitaBite AI</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./news.css">
+    <script src="./news.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="../" aria-label="VitaBite AI home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 4.5c8.56 0 15.5 6.94 15.5 15.5S28.56 35.5 20 35.5 4.5 28.56 4.5 20 11.44 4.5 20 4.5Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 22.2c4.5-.3 8.7-4.7 10-9.4 4.5 4.2 5.3 10.2 1.8 14.1-2.9 3.2-8.1 3-11.8-.2m8.3-5.8-6.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="27.8" cy="12.3" r="1.1" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-name">vita<span>bite</span><small>AI</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a href="../#approach">Our approach</a>
+          <a href="../#for">Who it's for</a>
+          <a href="../#roadmap">Roadmap</a>
+          <a href="./" aria-current="page">Longevity news</a>
+        </nav>
+        <a class="header-cta" href="../#contact">VitaBite home <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main" class="shell">
+      <section class="news-hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> The VitaBite reading room</p>
+          <h1 id="page-title">Longevity,<br><em>in the news.</em></h1>
+          <p class="hero-lede">Research and ideas about living well, read with curiosity and a careful eye on the evidence.</p>
+          <p class="hero-description">A planned, source-led briefing across scientific research, consumer goods, nutrients, and medication. Every story should lead back to its original publisher.</p>
+        </div>
+        <aside class="editorial-card" aria-label="Editorial approach">
+          <span class="editorial-star" aria-hidden="true">✳</span>
+          <p class="editorial-kicker">Our editorial lens</p>
+          <h2>Good questions.<br><em>Clear sources.</em></h2>
+          <p>News is a starting point for learning — not a shortcut to health advice.</p>
+          <span class="editorial-index">VITABITE / JOURNAL 001</span>
+        </aside>
+        <div class="hero-foot">
+          <span class="preview-status"><span aria-hidden="true"></span> Preview · publication not live</span>
+          <a href="#latest">Explore the feed <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="editorial-notice" aria-labelledby="notice-title">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <div>
+          <h2 id="notice-title">A note on where things stand</h2>
+          <p>The daily collector is gathering source-linked candidate records. Antigravity summaries, editorial review, and automatic publishing are not connected yet, so there are no approved stories in this public feed. Unreviewed candidates are never shown here.</p>
+        </div>
+        <span class="notice-status">EDITORIAL<br>SETUP IN PROGRESS</span>
+      </section>
+
+      <section class="feed-section" id="latest" aria-labelledby="latest-title">
+        <div class="feed-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> A considered collection</p>
+            <h2 id="latest-title">The latest <em>thinking.</em></h2>
+          </div>
+          <p id="feed-freshness" class="feed-freshness">Feed status: editorial publication is not connected.</p>
+        </div>
+
+        <div class="filter-bar" aria-label="Filter stories by category">
+          <span class="filter-label">Browse by</span>
+          <div class="filter-options" role="group" aria-label="News category">
+            <button class="filter-button is-active" type="button" data-category="all" aria-pressed="true">All topics</button>
+            <button class="filter-button" type="button" data-category="scientific" aria-pressed="false">Science</button>
+            <button class="filter-button" type="button" data-category="consumer_goods" aria-pressed="false">Consumer goods</button>
+            <button class="filter-button" type="button" data-category="nutrients" aria-pressed="false">Nutrients</button>
+            <button class="filter-button" type="button" data-category="medication" aria-pressed="false">Medication</button>
+          </div>
+        </div>
+
+        <p class="sr-only" id="filter-status" aria-live="polite" aria-atomic="true"></p>
+        <div class="story-list" id="story-list" aria-live="polite" aria-busy="true">
+          <div class="feed-message" id="feed-message">
+            <span class="message-ornament" aria-hidden="true">✳</span>
+            <p class="message-label">A thoughtful start</p>
+            <h3>Stories will find their place here.</h3>
+            <p>Once the summary and editorial review stages are connected, this space will share concise, source-linked longevity news. Until then, there are no approved articles to display.</p>
+            <span class="message-foot">NO APPROVED STORIES YET</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-guide" aria-labelledby="guide-title">
+        <div class="guide-heading">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Four ways into the conversation</p>
+          <h2 id="guide-title">Different subjects.<br><em>One curious mind.</em></h2>
+        </div>
+        <div class="guide-grid">
+          <article><span class="guide-number">01</span><span class="guide-symbol" aria-hidden="true">⌁</span><h3>Scientific research</h3><p>Studies, trials, reviews, and reporting — with evidence and limitations kept in view.</p></article>
+          <article><span class="guide-number">02</span><span class="guide-symbol" aria-hidden="true">◌</span><h3>Consumer goods</h3><p>Food, supplements, wellness products, and the claims made about them.</p></article>
+          <article><span class="guide-number">03</span><span class="guide-symbol" aria-hidden="true">✳</span><h3>Nutrients</h3><p>Nutrients and food components, from new research to practical nutrition context.</p></article>
+          <article><span class="guide-number">04</span><span class="guide-symbol" aria-hidden="true">＋</span><h3>Medication</h3><p>Drug and therapeutic developments reported as news — never as personal treatment advice.</p></article>
+        </div>
+      </section>
+
+      <section class="news-disclaimer" aria-label="Health information disclaimer">
+        <span aria-hidden="true">✳</span>
+        <p>Longevity news is for general information only. It is not medical advice, and it does not replace a qualified health professional.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <a class="brand footer-brand" href="../" aria-label="VitaBite AI home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 4.5c8.56 0 15.5 6.94 15.5 15.5S28.56 35.5 20 35.5 4.5 28.56 4.5 20 11.44 4.5 20 4.5Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 22.2c4.5-.3 8.7-4.7 10-9.4 4.5 4.2 5.3 10.2 1.8 14.1-2.9 3.2-8.1 3-11.8-.2m8.3-5.8-6.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="27.8" cy="12.3" r="1.1" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-name">vita<span>bite</span><small>AI</small></span>
+        </a>
+        <p>Good questions. A longer view.</p>
+        <a class="footer-top" href="../">Back to VitaBite <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="shell footer-bottom">
+        <p>© VitaBite AI <span aria-hidden="true">·</span> An idea growing in Vienna</p>
+        <p class="disclaimer">Informational concept only. Not medical advice or a substitute for professional care.</p>
+      </div>
+    </footer>
+  </body>
+</html>
