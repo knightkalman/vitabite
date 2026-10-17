@@ -15,12 +15,16 @@ python3 -m http.server 8000 --directory public
 
 Then open <http://localhost:8000>.
 
-## Publish with GitLab Pages
+## Publish with GitHub Pages
 
-The `.gitlab-ci.yml` pipeline publishes `public/` to GitLab Pages when a commit
-lands on the project's default branch. Enable GitLab Pages for the project if
-it is not already enabled. The site uses relative asset links, so it works at
-both a project Pages path and a custom domain.
+The [GitHub Actions workflow](.github/workflows/pages.yml) publishes `public/`
+to GitHub Pages when a commit lands on `main`, or when manually triggered.
+In the repository, go to **Settings → Pages → Build and deployment** and set
+**Source** to **GitHub Actions**. The workflow uses relative asset links so
+the site works at the repository's project Pages path.
+
+After the first successful deployment, GitHub displays the published URL under
+**Settings → Pages**.
 
 ## Project brief
 
