@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - echo "Publishing the VitaBite website to GitLab Pages"
+  pages:
+    publish: public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
