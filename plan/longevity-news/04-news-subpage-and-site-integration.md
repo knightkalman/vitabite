@@ -48,9 +48,10 @@ approved one.
   preserve direct links. Avoid invasive tracking and external embeds.
 - Label medical material as news, not medical advice. Avoid instructing users
   to take medication, supplements, or change treatment.
-- Ensure the existing deployment workflow includes page assets and published
-  news data, while never exposing private keys, API credentials, intermediate
-  source dumps, or unapproved content.
+- Ensure the existing deployment workflow includes page assets and the
+  owner-authorized metadata-only roundup, while never exposing private keys,
+  API credentials, intermediate source dumps, or generated unreviewed
+  summaries.
 
 ## Acceptance criteria
 
@@ -69,7 +70,8 @@ approved one.
 ## Handoff
 
 Before adding summaries, implement a controlled review and publication process
-for generated content. The current metadata-roundup snapshot does not
-automatically update when subsequent private collector artifacts are created.
-Proceed to [Step 5](./05-operations-and-launch.md) after the publication
-policy and Pages deployment are verified end to end.
+for generated content. The metadata-only roundup refreshes from each
+successful/partial scheduled collector run; generated summaries remain outside
+this auto-publication flow. Proceed to
+[Step 5](./05-operations-and-launch.md) after the publication policy and Pages
+deployment are verified end to end.

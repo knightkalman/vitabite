@@ -9,6 +9,7 @@ const storyList = document.querySelector("#story-list");
 const feedMessage = document.querySelector("#feed-message");
 const feedFreshness = document.querySelector("#feed-freshness");
 const filterStatus = document.querySelector("#filter-status");
+const headlineCount = document.querySelector("#headline-count");
 const filterButtons = [...document.querySelectorAll("[data-category]")];
 let stories = [];
 let selectedCategory = "all";
@@ -176,7 +177,11 @@ function updateFreshness(feed) {
   }).format(collectedAt);
   const staleNotice =
     ageInDays > staleAfterDays ? " · Update may be delayed" : "";
-  feedFreshness.textContent = `Last successful collection: ${formattedTime}${staleNotice}`;
+  const partialNotice =
+    feed.collection_status === "partial"
+      ? `Partial collection (${feed.sources_succeeded ?? 0}/${feed.sources_total ?? 0} sources)`
+      : "Successful collection";
+  feedFreshness.textContent = `${partialNotice}: ${formattedTime}${staleNotice}`;
 }
 
 async function loadFeed() {
@@ -196,6 +201,10 @@ async function loadFeed() {
     }
 
     updateFreshness(feed);
+    const candidateCount = feed.items.filter(
+      (story) => story.review_state === "candidate",
+    ).length;
+    headlineCount.textContent = `${candidateCount} collected headline${candidateCount === 1 ? "" : "s"} · unreviewed`;
     stories = feed.items.filter(
       (story) =>
         (story.review_state === "candidate" ||

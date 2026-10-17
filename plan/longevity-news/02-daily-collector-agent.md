@@ -1,8 +1,10 @@
 # Step 2: Build the scheduled daily collector agent
 
 > **Implementation status:** Implemented as `news/collector.py` and
-> `.github/workflows/longevity-news-collect.yml`. It collects metadata
-> candidates only; it does not invoke Antigravity or publish to Pages.
+> `.github/workflows/longevity-news-collect.yml`. It collects metadata-only
+> candidates, updates the explicitly unreviewed public headline roundup after
+> successful/partial collection, and deploys Pages in the same workflow. It
+> does not invoke Antigravity.
 
 ## Goal
 
@@ -61,6 +63,8 @@ artifacts, the website, or logs.
 ## Handoff
 
 Proceed to [Step 3](./03-antigravity-summaries-and-categorization.md) with the
-validated, provenance-linked candidate records. Keep unprocessed candidates
-out of the public feed. Configure and verify the Antigravity credential and
-structured-output integration before enabling that next step.
+validated, provenance-linked candidate records. The current owner-authorized
+publication mode may expose source metadata and provisional classifications,
+but never present candidates as reviewed or add generated summaries. Configure
+and verify the Antigravity credential and structured-output integration
+before enabling summarization.

@@ -43,6 +43,44 @@
         "failed"
       ]
     },
+    "sources_succeeded": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sources_total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "status"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "success",
+              "failed"
+            ]
+          },
+          "fetched": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "new": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    },
     "items": {
       "type": "array",
       "items": {
@@ -198,6 +236,22 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "properties": {
+          "collection_status": {
+            "const": "partial"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "sources_succeeded",
+          "sources_total",
+          "source_results"
+        ]
+      }
+    },
     {
       "if": {
         "properties": {

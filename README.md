@@ -30,12 +30,12 @@ source link, publication metadata, a provisional rule-based category, and
 tags. It does **not** fetch article text or create summaries.
 
 GitHub Actions runs this collector daily at 05:17 UTC and supports authorized
-manual dispatch. Candidate state is stored in a repository Actions artifact,
-not in the Pages artifact. Food Business News has a candidate feed configured
-but remains disabled until a maintainer can verify its terms. The collector
-needs no API keys. Antigravity summarization is not part of Steps 1–2 and
-remains disabled pending a separately configured and tested provider
-credential.
+manual dispatch. It keeps full candidate state in an Actions artifact,
+publishes only source-linked metadata from a successful run into the static
+roundup, and deploys the refreshed site. Total collection failure leaves the
+last published feed unchanged. Food Business News remains disabled until a
+maintainer can verify its terms. The collector needs no API keys. Antigravity
+summarization remains a separate future step.
 
 ## Longevity news
 
@@ -44,9 +44,9 @@ homepage and is included in the GitHub Pages deployment. The current public
 feed in [`public/news/news.json`](public/news/news.json) contains all 58
 source-linked headlines from the latest successful collection. They are
 explicitly labeled as unreviewed metadata candidates: categories and tags are
-provisional, and no article summaries are generated. A later daily collector
-run does not automatically replace this published snapshot. Antigravity
-summaries and editorial review remain future work.
+provisional, and no article summaries are generated. Future successful
+background collection runs update this headline-only roundup automatically.
+Antigravity summaries and editorial review remain future work.
 
 ## Publish with GitHub Pages
 

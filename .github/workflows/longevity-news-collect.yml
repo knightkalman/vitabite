@@ -7,7 +7,9 @@ on:
 
 permissions:
   actions: read
-  contents: read
+  contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: longevity-news-collection
@@ -15,8 +17,15 @@ concurrency:
 
 jobs:
   collect:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -34,7 +43,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          run_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/longevity-news-collect.yml/runs?status=success&per_page=100" \
+          run_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/longevity-news-collect.yml/runs?status=completed&per_page=100" \
             --jq ".workflow_runs[] | select(.id != ${GITHUB_RUN_ID}) | .id" | head -n 1)"
           echo "run_id=${run_id}" >> "$GITHUB_OUTPUT"
 
@@ -56,6 +65,39 @@ jobs:
             --sources news/sources.json \
             --state .longevity-news-state/candidates.json \
             --run-id "${GITHUB_RUN_ID}"
+
+      - name: Update public metadata roundup
+        run: |
+          python -m news.publish_metadata \
+            --sources news/sources.json \
+            --state .longevity-news-state/candidates.json \
+            --output public/news/news.json
+
+      - name: Commit updated public feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- public/news/news.json; then
+            echo "Public feed is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/news/news.json
+          git commit -m "Update longevity news roundup"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy website and updated news
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Save candidate-state artifact
         if: always()

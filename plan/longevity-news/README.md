@@ -19,19 +19,19 @@ acceptance criteria, and handoff.
   locally against the two enabled sources and produced metadata-only
   candidates in the verification run. A candidate food-industry feed is
   configured but disabled pending review of its inaccessible terms page.
-- GitHub Actions is configured to collect daily at 05:17 UTC and retain a
-  rolling candidate-state artifact. The schedule will become active after the
-  workflow is pushed to the default branch.
+- GitHub Actions is configured to collect daily at 05:17 UTC, retain a rolling
+  candidate-state artifact, update the public metadata roundup, and deploy the
+  site from the same background run. The schedule is active on the default
+  branch.
 - A `/news/` preview is implemented and linked from the VitaBite homepage. It
-  publishes all 58 headlines from the latest successful collector run as an
+  publishes all headlines from the latest successful collector run as an
   explicitly unreviewed metadata roundup. No summaries are generated, and
-  future collector runs do not automatically publish.
+  future successful collector runs update the metadata roundup automatically.
 - Antigravity's official unattended/programmatic route and structured-output
   SDK are documented, but there is no API secret configured or authenticated
   GitHub Actions test yet. Configure and verify that before Step 3.
-- Summaries and editorial approval are not implemented yet. The current
-  source-metadata roundup is live on GitHub Pages, but subsequent collector
-  artifacts do not automatically update it.
+- Summaries and editorial approval are not implemented yet. The collector's
+  scheduled workflow republishes the source-metadata roundup automatically.
 
 ## Plan files
 

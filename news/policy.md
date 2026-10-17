@@ -10,18 +10,18 @@ artifact is retained for 90 days; candidate records themselves expire after
 30 days.
 
 **Publication mode selected on 2026-10-17:** the project owner requested that
-all items from the latest successful collector run be made live. Therefore the
-static news page publishes the collected title, source/publisher, source link,
-publication-date metadata, and provisional category/tags as an explicitly
-**unreviewed metadata roundup**. It does not publish article bodies, generated
-summaries, or claims of editorial/clinical review. The current 58-item snapshot
-does not automatically refresh from subsequent private workflow artifacts.
-Until a separate reviewed publication workflow exists, a maintainer must
-update the static feed deliberately from a successful, schema-validated
-collector run.
+all items from the latest successful collector run be made live and refreshed
+by the background collector. Therefore the static news page publishes the
+collected title, source/publisher, source link, publication-date metadata, and
+provisional category/tags as an explicitly **unreviewed metadata roundup**. It
+does not publish article bodies, generated summaries, or claims of
+editorial/clinical review. Each successful or partially successful scheduled
+run updates the static feed and deploys Pages in that same workflow. A total
+collection failure preserves the previous public feed. Full candidate state
+remains in the workflow artifact.
 
-Scheduled workflows can be delayed or disabled by GitHub, so the page must
-eventually report actual last-successful collection time rather than imply
+Scheduled workflows can be delayed or disabled by GitHub, so the page reports
+the actual collection time and source-level run status rather than implying
 that a run happened at an exact minute.
 
 ## Antigravity integration decision
