@@ -1,23 +1,21 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-10-21T05:42:08Z",
-  "last_successful_collection": "2026-10-21T05:42:07Z",
-  "collection_status": "success",
-  "sources_succeeded": 2,
+  "generated_at": "2026-10-22T05:41:46Z",
+  "last_successful_collection": "2026-10-22T05:41:44Z",
+  "collection_status": "partial",
+  "sources_succeeded": 1,
   "sources_total": 2,
   "source_results": [
     {
       "source_id": "nature_aging",
-      "status": "success",
-      "fetched": 8,
-      "new": 0
+      "status": "failed"
     },
     {
       "source_id": "pubmed_longevity",
       "status": "success",
       "fetched": 50,
-      "new": 50
+      "new": 7
     }
   ],
   "items": [
@@ -1283,6 +1281,24 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "b7f2fe3063151fb1e12a1531c89fc5be2408a913770155de8f1e8ea490cdb7e9",
+      "title": "Response to the correspondence regarding \"Association between anticholinergic and sedative medications and physical functioning: data from the Canadian Longitudinal Study on Aging (CLSA)\".",
+      "publisher": "European journal of clinical pharmacology",
+      "author": "Cossette B",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902065",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Oct 21",
+      "category": "medication",
+      "tags": [
+        "medication",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "b616b9e7fcc3793e9ba7e72676339c7d17afc46cb62485528da5fe6ed5192fad",
       "title": "Investigating Factors Associated with the Occurrence of Atrial Fibrillation after Non-cardiothoracic Surgery.",
       "publisher": "Advanced biomedical research",
@@ -1382,6 +1398,24 @@
       "publication_date": null,
       "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Oct 19",
+      "category": "scientific",
+      "tags": [
+        "needs_review",
+        "scientific"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "ac6585c70ade1f76c76f333cd28b004e0e91213791fa216b6dcd40b3e1826037",
+      "title": "H3K9me3 inhibition reverses Alzheimer's progression by restoring synaptic and immune proteostasis across the brain-retina axis.",
+      "publisher": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
+      "author": "Fuchs DT",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902099",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Oct",
       "category": "scientific",
       "tags": [
         "needs_review",
@@ -1611,6 +1645,24 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "a03c436ff881abc5e7194ca0e7a34f841fb7fa52d06c7ee74a1cfbb82a4492c8",
+      "title": "Routine serum biomarkers and lightgbm modeling for the diagnosis of abomasal ulcers in culled dairy cows.",
+      "publisher": "Tropical animal health and production",
+      "author": "Amorim JE",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902090",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Oct 20",
+      "category": "scientific",
+      "tags": [
+        "needs_review",
+        "scientific"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "9fe2dd36cd6bd79f6697da7a3678bc513037524225d365d3ba46c81b6d579a5c",
       "title": "Diverging diagnostic trajectories of degenerative cervical myelopathy and cervical radiculopathy in South Korea: a nationwide time-series analysis of claims data, 2010-2024.",
       "publisher": "Frontiers in public health",
@@ -1659,6 +1711,24 @@
       "tags": [
         "needs_review",
         "scientific"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "9da6f9c3fb41bedc818d7ad13bd6981c7a69062feeadb49be10a2dc075148289",
+      "title": "Community-based traditional Chinese medicine health service use among older adults and provider-reported delivery barriers in Wuhan, China: an explanatory sequential mixed-methods study.",
+      "publisher": "BMC health services research",
+      "author": "Yue Y",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902286",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Sep 26",
+      "category": "medication",
+      "tags": [
+        "medication",
+        "needs_review"
       ],
       "summary": null,
       "evidence_notes": null,
@@ -2056,6 +2126,24 @@
       "category": "scientific",
       "tags": [
         "human_study",
+        "needs_review",
+        "scientific"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "8a14518d28d49c9977d0c9398192caf7e953455aaacb6a5982d8ab2378124e38",
+      "title": "Single-step GWAS reveals candidate genes associated with longevity traits in Iranian Holstein cattle.",
+      "publisher": "Tropical animal health and production",
+      "author": "Maddahi N",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902117",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Oct 20",
+      "category": "scientific",
+      "tags": [
         "needs_review",
         "scientific"
       ],
@@ -2922,6 +3010,25 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "5d6ff655e990c4fdebb44cb14f1fd463d82c58de03378e42d4d6885d507afa52",
+      "title": "Skeletal muscle fatigue resistance is differentially affected in 8-month-old male and female hAβ-KI mice.",
+      "publisher": "Physiological reports",
+      "author": "Copeland EN",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902513",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Oct",
+      "category": "scientific",
+      "tags": [
+        "animal_study",
+        "needs_review",
+        "scientific"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "5d5e0d3c68f75f24c9be963ae80c55af1842b7bc470a7d9614b3ba59a42575a1",
       "title": "A New Frontier: Partial Cellular Reprogramming in Plastic Surgery.",
       "publisher": "Plastic and reconstructive surgery",
@@ -3274,6 +3381,24 @@
       "publication_date": null,
       "publication_date_precision": "year",
       "publication_date_raw": "2026",
+      "category": "scientific",
+      "tags": [
+        "needs_review",
+        "scientific"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "46b9f707bb88407f0ed9e1a525d47f7bac0fa02b9f9891c2c4a587c58f8c7e01",
+      "title": "Environmental variability versus extrinsic mortality as correlates of mammalian lifespan: a pre-specified comparative analysis with phylogenetic and deep-time evidence.",
+      "publisher": "Biogerontology",
+      "author": "Li D",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42902049",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Oct 21",
       "category": "scientific",
       "tags": [
         "needs_review",
