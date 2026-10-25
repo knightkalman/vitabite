@@ -81,6 +81,26 @@ does not update or publish `/news/`. The SDK path has not yet been
 authenticated or verified in GitHub Actions, so unattended summarization is
 not enabled.
 
+## Longevity-events collector and `/events/` directory
+
+The approved event sources and collection policy are in [`events/`](events/).
+To run the metadata-only events collector and update the static `/events/`
+feed manually:
+
+```sh
+python3 -m events.collector --state /tmp/vitabite-events-candidates.json --run-id local
+python3 -m events.publish_metadata --state /tmp/vitabite-events-candidates.json --output public/events/events.json
+```
+
+The [`/events/` subpage](public/events/index.html) is linked from the VitaBite
+homepage and `/news/`, and groups collected conferences, symposia, workshops,
+and congresses into **All**, **Vienna**, **Europe** (including Vienna),
+**US**, and **Asia**. GitHub Actions runs
+[`.github/workflows/longevity-events-collect.yml`](.github/workflows/longevity-events-collect.yml)
+daily at 05:47 UTC and on manual dispatch, updating `public/events/events.json`
+and deploying GitHub Pages. Private Antigravity summarization for authorized
+event descriptions is implemented in [`events/summarizer.py`](events/summarizer.py).
+
 ## Publish with GitHub Pages
 
 The [GitHub Actions workflow](.github/workflows/pages.yml) publishes `public/`

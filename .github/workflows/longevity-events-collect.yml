@@ -1,0 +1,112 @@
+name: Collect longevity events candidates
+
+on:
+  schedule:
+    - cron: "47 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: longevity-events-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependencies
+        run: python -m pip install -r requirements-news-ci.txt
+
+      - name: Run collector tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Restore prior candidate state
+        id: prior
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/longevity-events-collect.yml/runs?status=completed&per_page=100" \
+            --jq ".workflow_runs[] | select(.id != ${GITHUB_RUN_ID}) | .id" | head -n 1)"
+          echo "run_id=${run_id}" >> "$GITHUB_OUTPUT"
+
+      - name: Download last successful state artifact
+        if: steps.prior.outputs.run_id != ''
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: longevity-events-state
+          path: .longevity-events-state
+          run-id: ${{ steps.prior.outputs.run_id }}
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+
+      - name: Collect candidate event metadata
+        id: collect
+        run: |
+          python -m events.collector \
+            --sources events/sources.json \
+            --state .longevity-events-state/candidates.json \
+            --run-id "${GITHUB_RUN_ID}"
+
+      - name: Update public events metadata roundup
+        run: |
+          python -m events.publish_metadata \
+            --sources events/sources.json \
+            --state .longevity-events-state/candidates.json \
+            --output public/events/events.json
+
+      - name: Commit updated public feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- public/events/events.json; then
+            echo "Public events feed is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/events/events.json
+          git commit -m "Update longevity events roundup"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy website and updated events
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Save candidate-state artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: longevity-events-state
+          path: .longevity-events-state/candidates.json
+          if-no-files-found: warn
+          retention-days: 90

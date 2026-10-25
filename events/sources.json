@@ -1,0 +1,204 @@
+{
+  "registry_version": 1,
+  "sources": [
+    {
+      "source_id": "nature_aging_events",
+      "name": "Nature Aging Conferences & Symposia",
+      "publisher": "Springer Nature",
+      "feed_url": "https://www.nature.com/nataging.rss",
+      "source_type": "rss",
+      "format": "rss1",
+      "allowed_domains": [
+        "nature.com"
+      ],
+      "filter_terms": [
+        "conference",
+        "symposium",
+        "congress",
+        "workshop",
+        "summit",
+        "forum",
+        "meeting",
+        "colloquium",
+        "annual"
+      ],
+      "topic_coverage": [
+        "aging conferences",
+        "longevity symposia",
+        "scientific meetings"
+      ],
+      "update_cadence": "continuous; checked daily",
+      "permitted_collection_method": "Fetch the publisher-provided public RSS feed and retain matching event/meeting metadata only.",
+      "terms_notes": "The feed includes a Springer Nature copyright notice. Preserve attribution, use article/event links and metadata only, and review current Springer Nature site terms before expanding collection or reusing content.",
+      "terms_url": "https://www.nature.com/info/terms-and-conditions",
+      "trust_tier": "primary_publisher",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
+      "source_id": "pubmed_events_vienna",
+      "name": "PubMed Vienna & Austria Longevity Events",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "default_location": "vienna",
+      "query": "(Vienna[Title/Abstract] OR Wien[Title/Abstract]) AND (congress[Title] OR conference[Title] OR symposium[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR abstracts[Title])",
+      "date_window_days": 730,
+      "max_results": 20,
+      "topic_coverage": [
+        "Vienna conferences",
+        "Austrian medical congresses",
+        "European symposia in Vienna"
+      ],
+      "update_cadence": "continuous; checked daily with a 730-day conference window",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
+      "source_id": "pubmed_events_europe",
+      "name": "PubMed Europe Longevity & Aging Conferences",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "default_location": "europe",
+      "query": "(Europe[Title/Abstract] OR European[Title/Abstract] OR EuGMS[Title/Abstract] OR ARDD[Title/Abstract] OR London[Title/Abstract] OR Berlin[Title/Abstract] OR Zurich[Title/Abstract] OR Basel[Title/Abstract] OR Paris[Title/Abstract] OR Amsterdam[Title/Abstract] OR Copenhagen[Title/Abstract] OR Madrid[Title/Abstract] OR Milan[Title/Abstract] OR Rome[Title/Abstract] OR Geneva[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR geriatrics[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR society[Title])",
+      "date_window_days": 365,
+      "max_results": 20,
+      "topic_coverage": [
+        "European longevity conferences",
+        "geriatric medicine congresses",
+        "European aging symposia"
+      ],
+      "update_cadence": "continuous; checked daily with a 365-day conference window",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
+      "source_id": "pubmed_events_us",
+      "name": "PubMed US Longevity & Aging Symposia",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "default_location": "us",
+      "query": "(\"United States\"[Title/Abstract] OR American[Title] OR \"National Institute on Aging\"[Title/Abstract] OR Midwest[Title/Abstract] OR Boston[Title/Abstract] OR \"San Francisco\"[Title/Abstract] OR \"San Diego\"[Title/Abstract] OR \"New York\"[Title/Abstract] OR Bethesda[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title])",
+      "date_window_days": 365,
+      "max_results": 20,
+      "topic_coverage": [
+        "US longevity conferences",
+        "National Institute on Aging workshops",
+        "American gerontology symposia"
+      ],
+      "update_cadence": "continuous; checked daily with a 365-day conference window",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
+      "source_id": "pubmed_events_asia",
+      "name": "PubMed Asia Longevity & Healthy Aging Forums",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "default_location": "asia",
+      "query": "(Asia[Title/Abstract] OR Asian[Title/Abstract] OR Singapore[Title/Abstract] OR Tokyo[Title/Abstract] OR Japan[Title/Abstract] OR Japanese[Title] OR Korea[Title/Abstract] OR Seoul[Title/Abstract] OR China[Title/Abstract] OR Shanghai[Title/Abstract] OR Beijing[Title/Abstract] OR \"Hong Kong\"[Title/Abstract] OR Taiwan[Title/Abstract] OR India[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR geriatrics[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR consensus[Title])",
+      "date_window_days": 365,
+      "max_results": 20,
+      "topic_coverage": [
+        "Asian longevity forums",
+        "geriatric consensus meetings in Asia",
+        "healthy aging symposia"
+      ],
+      "update_cadence": "continuous; checked daily with a 365-day conference window",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
+      "source_id": "pubmed_events_global",
+      "name": "PubMed Global Longevity Conferences & Workshops",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "query": "(longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR aging[Title] OR ageing[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR summit[Title] OR forum[Title] OR meeting[Title] OR colloquium[Title])",
+      "date_window_days": 365,
+      "max_results": 25,
+      "topic_coverage": [
+        "global longevity conferences",
+        "geroscience workshops",
+        "healthy aging symposia"
+      ],
+      "update_cadence": "continuous; checked daily with a 365-day conference window",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
+      "source_id": "food_business_events",
+      "name": "Food Business News Conferences & Expos",
+      "publisher": "Sosland Publishing",
+      "feed_url": "https://www.foodbusinessnews.net/rss/articles",
+      "source_type": "rss",
+      "format": "rss2",
+      "allowed_domains": [
+        "foodbusinessnews.net"
+      ],
+      "filter_terms": [
+        "conference",
+        "expo",
+        "summit",
+        "symposium",
+        "forum",
+        "trade show"
+      ],
+      "topic_coverage": [
+        "food industry events",
+        "nutraceutical expos",
+        "nutrition summits"
+      ],
+      "update_cadence": "continuous; checked daily",
+      "permitted_collection_method": "Fetch the publisher-provided public RSS feed and retain only matching event metadata.",
+      "terms_notes": "The linked terms page returned HTTP 403 during verification. Keep this source disabled until a maintainer can review the terms.",
+      "terms_url": "https://www.foodbusinessnews.net/terms-of-use",
+      "trust_tier": "specialist_trade_publisher",
+      "enabled": false,
+      "last_checked_date": "2026-10-25"
+    }
+  ]
+}

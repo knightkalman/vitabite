@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VitaBite longevity event candidate",
+  "description": "A source-linked candidate event record.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "item_id",
+    "source_id",
+    "source_record_id",
+    "title",
+    "publisher",
+    "author",
+    "source_url",
+    "publication_date",
+    "publication_date_precision",
+    "publication_date_raw",
+    "collected_at",
+    "content_access_basis",
+    "location",
+    "location_groups",
+    "location_method",
+    "tags",
+    "summary",
+    "evidence_notes",
+    "review_state",
+    "run_id",
+    "last_updated"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "item_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "source_record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    },
+    "author": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 250
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "publication_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "publication_date_precision": {
+      "enum": [
+        "day",
+        "month",
+        "year",
+        "unknown"
+      ]
+    },
+    "publication_date_raw": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "content_access_basis": {
+      "enum": [
+        "public_feed_metadata",
+        "public_bibliographic_metadata"
+      ]
+    },
+    "location": {
+      "enum": [
+        "vienna",
+        "europe",
+        "us",
+        "asia",
+        "other"
+      ]
+    },
+    "location_groups": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "vienna",
+          "europe",
+          "us",
+          "asia"
+        ]
+      }
+    },
+    "location_method": {
+      "const": "rules_candidate"
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]*$",
+        "maxLength": 50
+      }
+    },
+    "summary": {
+      "type": "null"
+    },
+    "evidence_notes": {
+      "type": "null"
+    },
+    "review_state": {
+      "const": "candidate"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

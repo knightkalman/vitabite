@@ -1,0 +1,1692 @@
+{
+  "schema_version": 1,
+  "publication_status": "metadata_roundup",
+  "generated_at": "2026-10-25T18:41:12Z",
+  "last_successful_collection": "2026-10-25T18:41:04Z",
+  "collection_status": "success",
+  "sources_succeeded": 6,
+  "sources_total": 6,
+  "source_results": [
+    {
+      "source_id": "nature_aging_events",
+      "status": "success",
+      "fetched": 0,
+      "new": 0
+    },
+    {
+      "source_id": "pubmed_events_vienna",
+      "status": "success",
+      "fetched": 20,
+      "new": 20
+    },
+    {
+      "source_id": "pubmed_events_europe",
+      "status": "success",
+      "fetched": 11,
+      "new": 11
+    },
+    {
+      "source_id": "pubmed_events_us",
+      "status": "success",
+      "fetched": 4,
+      "new": 4
+    },
+    {
+      "source_id": "pubmed_events_asia",
+      "status": "success",
+      "fetched": 18,
+      "new": 18
+    },
+    {
+      "source_id": "pubmed_events_global",
+      "status": "success",
+      "fetched": 25,
+      "new": 19
+    }
+  ],
+  "items": [
+    {
+      "item_id": "fdbd341cf44c8c0e8a20af0f07c5ce1ef6f3a18c8ae61fedfa2bfc8cd98de5fa",
+      "title": "Think BIG, Stay Connected: A Regional Immunology Meeting as a Durable Model for Scientific Community Building.",
+      "publisher": "Immunology and cell biology",
+      "author": "Stanisic DI",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42811617",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Sep 29",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "meeting",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "f9e6bd38f3c429c7d5a9c2f3153cbcf3a4ab898518836d1b314fc9ceb62d56e2",
+      "title": "The construction of a psychoanalytic genealogy: Ramon Sarró and the meeting with Freud.",
+      "publisher": "History of psychology",
+      "author": "Lévy Lazcano S",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41037447",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Aug",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "meeting",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "f958dc9aa8c1a6a98a70b8dfb4d996af499a2f31fec481e5f7540854746b9717",
+      "title": "Meeting report for the Second International Conference on Unconventional Animal Models of Alzheimer's Disease and Aging (UAMAA 2026).",
+      "publisher": "Alzheimer's & dementia (New York, N. Y.)",
+      "author": "Alshami J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42388534",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jul-Sep",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "conference",
+        "geroscience",
+        "meeting",
+        "needs_review",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "f803363b5182cd48a6ebe2b2a3027c9c94dfd54e341ba54aa56d4803c3184ff2",
+      "title": "Insights from the European Society for Medical Oncology (ESMO) Gynaecological Cancers Congress 2025.",
+      "publisher": "International journal of gynecological cancer : official journal of the International Gynecological Cancer Society",
+      "author": "Leis LV",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40857972",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Oct",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "f5a0418cbfcd16faf86f5d45739cbd35594ee853d9ab28ed441f6b3672f22ce7",
+      "title": "Unconventional animal models of Alzheimer's disease and aging: key insights from the UAMAA 2026 conference.",
+      "publisher": "Lab animal",
+      "author": "Garduño BM",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42749851",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Oct",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "conference",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "f4b297b0f3cbe18132c89091c11fccb4dd2b1877d77af523277bec9bbac9eebd",
+      "title": "International workshop report on \"Animal resilience and organismal response to environmental change: insights from basal metazoans\", Tutzing (Germany), 22-25 September 2025.",
+      "publisher": "Frontiers in zoology",
+      "author": "de Luca KL",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41580841",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jan 25",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "needs_review",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "ef3335c707f290c253a64139a55290eeeb9469cb7cc7c6711154a3444a082277",
+      "title": "Toward actionable interventions in human aging (12th ARDD meeting, 2025).",
+      "publisher": "Aging",
+      "author": "Dekan A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41944812",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Apr 6",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "geroscience",
+        "meeting",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "eb42b3ff8742f0da6f325afc6e9082963d68ede002f2abd75e18ad6e61be827c",
+      "title": "[Expert consensus on risk management and interventions for disability and dementia of the elderly population in the community (2026 edition)].",
+      "publisher": "Zhonghua yi xue za zhi",
+      "author": "Geriatric Medicine Branch, China Association of Gerontology and Geriatrics",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41314700",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jan 6",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "ea157e6daf01cfc79dceebc128be9d1f0c641775df3c16199170cf7700679a17",
+      "title": "Expert Consensus on the Management of Obesity in Older Adults (2026 Edition).",
+      "publisher": "Aging medicine (Milton (N.S.W))",
+      "author": "Pan Q",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42689016",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Aug",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "geroscience",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "e6643fcb417d44d6bd95a3c736a2f1aa6830727d29e0f940dffe76d04d45738f",
+      "title": "Frailty in Cardiorenal Care: A Geriatric Perspective on the 2026 European Society of Cardiology Guidelines.",
+      "publisher": "Cureus",
+      "author": "Martynenko A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42713081",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Sep",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "d6fd7f8abaeb4e28900346345d4391a501b167f03afaa2e9ea609749822d7f9a",
+      "title": "International Society of Urological Pathology Multidisciplinary Expert Consultation Conference on Evaluation of Treatment Effects in Prostate and Bladder Cancer: Working Group 2: The Urinary Bladder.",
+      "publisher": "The American journal of surgical pathology",
+      "author": "Downes MR",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42682094",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Sep 2",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "conference",
+        "needs_review",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "d1b890337a2d3d187b7134db0f7e074e8bd0071c23e61061c6a6c2f11c835511",
+      "title": "Special Issue: 5. Internationales Lymphologisches Symposium Die lange Nacht der Lymphologie Wien, Östereich, 21.-23. November 2024- 5th International Lymphology Symposium Long Night of Lymphology Vienna, Austria, November 21st to 23rd, 2024.",
+      "publisher": "Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39888191",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Jan",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "needs_review",
+        "symposium",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "cc3b027d4e3538621bc45845b45290b236bccf3c3f0c0a423f621ffeec64aaec",
+      "title": "The HBCU Aging Conference: an overview and implementation steps for preparing future scholars to address knowledge gaps in Black aging research.",
+      "publisher": "Gerontology & geriatrics education",
+      "author": "Washington TR",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42563377",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Aug 6",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "conference",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "c8d376800643797b49d9e02ef78c64f44fde3d5944853dd6542530f7cc6e224f",
+      "title": "The Sixth Annual Symposium of the Midwest Aging Consortium.",
+      "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+      "author": "Sturmlechner I",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41429578",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Feb 5",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "symposium",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "c64240f7e11e368b2beb85f0952da3026f65910511a9c0385418c0b39ec76393",
+      "title": "Consensus statement on practical guidance for optimizing antihypertensive therapy in older adults needing nursing care by the Japan Geriatrics Society and the Japanese Society of Hypertension: English translation of the Japanese article.",
+      "publisher": "Hypertension research : official journal of the Japanese Society of Hypertension",
+      "author": "Iwashima Y",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41866430",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 May",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "c56e1d29acad0cfca0b4f60ada26e5000d442e549b2329fa1d8d8991ebde41e1",
+      "title": "'Healthy menopause': The European Menopause and Andropause Society (EMAS) 2026 framework for precision, digital, and interdisciplinary midlife health.",
+      "publisher": "Maturitas",
+      "author": "Stute P",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42531734",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Sep",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "c48b6f401907ac8b1fb477d13519af4207b43e13f666eb73d4814db79f2d9350",
+      "title": "[Expert consensus on adjunctive Chinese medicine therapy for burn shock (2026 edition)].",
+      "publisher": "Zhonghua shao shang yu chuang mian xiu fu za zhi",
+      "author": "Burns and Trauma Branch of Chinese Geriatrics Society",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42373501",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jun 20",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "bffef83b70a980198ec1c33d37a9bbf446405cf99bacff91290400949de75900",
+      "title": "Meeting Report: Fourth Correlates of Protection for Next Generation Influenza Vaccines.",
+      "publisher": "Influenza and other respiratory viruses",
+      "author": "Tscherne A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41952426",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Apr",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "meeting",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "bbb56a5eb702a8f3010a9d9b2189070fd92d94bbb08fe3014d38611916830ea9",
+      "title": "Supporting Diversity in Health and Aging Research and Education: Recommendations from a Multidisciplinary Gerontological Symposium.",
+      "publisher": "The Gerontologist",
+      "author": "Perone AK",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42904698",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Oct 21",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "symposium"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "bae5563000a376d9a3b247d713c444a145670508c30779b12081c58e9afde671",
+      "title": "Frailty risk in adults with dynapenia: A cross-sectional study comparing AWGS 2019 and GLIS 2024 consensus enhanced clinical utility.",
+      "publisher": "Journal of the Formosan Medical Association = Taiwan yi zhi",
+      "author": "Lin KP",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41198452",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Oct",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "b6535ec8abee26df82c5ad5c87ae6ab0fe865082ae6894c7c1e0deae9e521446",
+      "title": "A National Institute on Aging workshop on sex differences in health across the lifespan.",
+      "publisher": "Nature aging",
+      "author": "Pea J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42595797",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Sep",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "us",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "b64e13d383a7a3bbac3e56b988dbbd7fb5f638b8dcc8f51f92a2345a651b3dc8",
+      "title": "A comprehensive summary of the ASEV-CzeSEV joint meeting on extracellular vesicles.",
+      "publisher": "Extracellular vesicles and circulating nucleic acids",
+      "author": "Turkova K",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39811734",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2024",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "meeting",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "b5aa89e94afc3666571e58a3a18bcf418e7a9b0df2370758e67a73351c5c4602",
+      "title": "The Right Person, the Right Treatment, at the Right Time in Alzheimer's Disease: Insights From the 2025 Brain Aging Symposium.",
+      "publisher": "Aging cell",
+      "author": "de Magalhães CG",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41466363",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Jan",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "symposium"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "b102e4aef4433adddaaf05dc7698020948dee48a96488997b3949aacc8ee9575",
+      "title": "Towards global healthy longevity: report from the 1st World Longevity Summit in Kyotango, Japan.",
+      "publisher": "npj aging",
+      "author": "Kitani T",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41253835",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2025 Nov 18",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "geroscience",
+        "needs_review",
+        "summit"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "b020fe9a067005775504408b66a5014795193ae939d36ecd5ff1b15433d13ee6",
+      "title": "DÖAK 2025 / 12th German-Austrian AIDS Congress, 20-22 March 2025, Hofburg Vienna.",
+      "publisher": "HIV medicine",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40108978",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Mar",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "ab94ca7bb345a7b53b8d8e7fc0dd6ab0ebe2b57d6caa11bff19478e60728b1bb",
+      "title": "The 19th St. Gallen international breast cancer conference 'primary therapy of patients with early breast cancer. Evidence, controversies, consensus': key moments and breakthroughs.",
+      "publisher": "Ecancermedicalscience",
+      "author": "Morigi C",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41877749",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "conference",
+        "consensus",
+        "europe",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "a415b90b734f3eccf466fd9b6347ab957ec795fd95a210ba4722a84fa3e4636d",
+      "title": "Moving geroscience forward in China: proceedings of the first international exchange forum of the Chinese Geriatrics Society.",
+      "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+      "author": "Zhang L",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41692982",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Mar 10",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "forum",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "a3bfa61c85fbd9e6ceb1b1446f67373aa313ec3f6f5175a995d0fb6953ed4a0e",
+      "title": "[Results of the meeting of the Interdisciplinary Expert Council on an integrated approach to the management of peri- and postmenopausal women with psycho-emotional and neurological disorders].",
+      "publisher": "Zhurnal nevrologii i psikhiatrii imeni S.S. Korsakova",
+      "author": "Balan VY",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42565397",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "meeting",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "9e1272a217b280b70bfac05bfa81724ad721d989725bff1f9b370c74264b66e0",
+      "title": "A research agenda for aging and climate change: recommendations from a research-to-practice consensus workshop.",
+      "publisher": "Innovation in aging",
+      "author": "Pillemer K",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42666971",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "geroscience",
+        "needs_review",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "9bcb2865d546393058c52f2564aff9f64c472ec75288741dccf2558a5eb777ad",
+      "title": "Meeting WHO physical activity standards may promote greater gut microbiota diversity and preservation of Ruminococcus in community-dwelling older women.",
+      "publisher": "Environmental health and preventive medicine",
+      "author": "Shibata M",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41692473",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "meeting",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "992078d6eb868c74017ca8f83e4c2b986b28113b46fce34b2c0543d9cbf57606",
+      "title": "Management of Syncope in Geriatric Patients: Are 2018 European Society of Cardiology Guidelines Still Relevant?",
+      "publisher": "Journal of clinical medicine",
+      "author": "Antonazzo B",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42652707",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Aug 14",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "901c0d3b8ae7e1609e6d9025f9f4e0198e07804a0db3b67a524998c38f3ba084",
+      "title": "Menopause and hormone therapy in relation to dietary intake, physical activity, and sleep, and meeting lifestyle guidelines.",
+      "publisher": "Menopause (New York, N.Y.)",
+      "author": "Shillito J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42299899",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jun 16",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "consensus",
+        "meeting",
+        "needs_review",
+        "nutrition",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "8f1d8892e89fbaa8c5f75fa3b835b93f41d6cf03782334c85e193b7b472a5bdd",
+      "title": "Meeting the Needs of an Aging Population: How Older Adults' Healthcare Experiences in Canada Compare Internationally.",
+      "publisher": "Healthcare quarterly (Toronto, Ont.)",
+      "author": "Latus R",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42010378",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Jan",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "geroscience",
+        "meeting",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "88c0cc00fde43633dfd216a23503d8d6a9fcc69ea4e1e2c9889e844820d93fed",
+      "title": "Consensus Statement on Practical Guidance for Optimizing Antihypertensive Therapy in Older Adults Needing Nursing Care by the Japan Geriatrics Society and the Japanese Society of Hypertension: English Translation of the Japanese Article.",
+      "publisher": "Geriatrics & gerontology international",
+      "author": "Iwashima Y",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41865762",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Mar",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "81d2d832347dc303ea014091ed4e7ed41e3b41cb766bef7234a608bd4ac22789",
+      "title": "St. Gallen/Vienna 2025 Summary of Key Messages on Therapy in Early Breast Cancer from the 2025 St. Gallen International Breast Cancer Conference.",
+      "publisher": "Breast care (Basel, Switzerland)",
+      "author": "Ditsch N",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40546709",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Aug",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "conference",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "7de58cf2a72e8d2706f9719369b22fad79a8851d42d1f026165cb766518b1d7d",
+      "title": "Stable Isotope Reference Materials and Scale Definitions-Outcomes of the 2024 IAEA Experts Meeting.",
+      "publisher": "Rapid communications in mass spectrometry : RCM",
+      "author": "Camin F",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40275550",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2025 Jul 30",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "meeting",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "79eb81aaa5a89499e8581b969a9d5ec98867fdde43bc7879caf4ba7421868a4a",
+      "title": "[Rethinking aging, autonomy and disability in France: A University-driven, territory-based, and prevention-oriented transformation of the health system - Position of the French Conference of Deans of Medical Faculties].",
+      "publisher": "Geriatrie et psychologie neuropsychiatrie du vieillissement",
+      "author": "Annweiler C",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42592730",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Aug 13",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "conference",
+        "europe",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "795ac232588b0c08176a396c24541e8330ac2eb40dc4c790d8582a2f044e29f7",
+      "title": "A National Institute on Aging workshop on the long-term effects of pregnancy on aging.",
+      "publisher": "Nature aging",
+      "author": "Kim KI",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41299089",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Dec",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "us",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "788ecc9954c935e6edfaef6aa6aa63fd51866ec87341df6e2878cda9d76d9bfd",
+      "title": "Current perspectives and emerging directions in research and practice: highlights from the 15th Annual International Workshop on Aging and HIV.",
+      "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+      "author": "Byun JY",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41872027",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 May 7",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "77021ec8455e64680a9ef25cb3cc601fbc3516fc5fd556e3e7d32b6e59215438",
+      "title": "'We need to be part of the solution': lessons from the 2024 PPRI Conference on ensuring access to affordable medicines through innovative policies.",
+      "publisher": "Journal of pharmaceutical policy and practice",
+      "author": "Vogler S",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39763616",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2024",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "conference",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "768e341cb2ed6ddf2aeef2b4867eaff1b2753ac5664f5aee7706c046c53865d0",
+      "title": "Traveling sustainably to and from the EAPS Congress Vienna- a pediatric researcher's experience.",
+      "publisher": "Pediatric research",
+      "author": "Herrmann ML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40610710",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Feb",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "6b94ddbc834f1fe07a73e26d31bd234f17666943d78c6627ce21a6e6132bbe4d",
+      "title": "The Case of Paris and Helen Through Time, Society, and Anti-Aging Medicine.",
+      "publisher": "The Journal of craniofacial surgery",
+      "author": "Hwang K",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40601610",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jun 1",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "6a63b5b75db8812ed30b07e0663037dbf8e1c7d85a0238976b253683cc82b0dd",
+      "title": "Jahrestagung der Deutschen, Österreichischen und Schweizerischen Gesellschaften für Hämatologie und Medizinische Onkologie: Wien, Österreich, 9. bis 12. Oktober 2026: ABSTRACTS.",
+      "publisher": "Oncology research and treatment",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42848726",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "659eccbef0ca2a51e22759056a87bf0c2c5aa8e67d856dc032db543fe171b762",
+      "title": "Life course influences on cognitive aging and dementia risk: A mini-forum on the role of socioeconomics, caregiving, and social determinants.",
+      "publisher": "Journal of Alzheimer's disease : JAD",
+      "author": "Robinson-Lane SG",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42340314",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Aug",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "forum",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "5df7422ea438d45abd26403b4a3816633062444fb600cfa6915d7a06a5595793",
+      "title": "Overview of prevention and treatment approaches: a summary from the European association for research on obesity in childhood \"Prevention of Obesity\" symposium.",
+      "publisher": "Frontiers in pediatrics",
+      "author": "Moliterno P",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40963967",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2025",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "needs_review",
+        "nutrition",
+        "symposium"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "5b5fa8a41c4dd3679923aa997da626c87adfc1ce858eab1957aeac1748f4b5b6",
+      "title": "Special Issue: 5. Internationales Lymphologisches Symposium Die lange Nacht der Lymphologie Wien, Östereich, 21.-23. November 2024- 5th International Lymphology Symposium Long Night of Lymphology Vienna, Austria, November 21st to 23rd, 2024.",
+      "publisher": "Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39888243",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Jan",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "needs_review",
+        "symposium",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "58ce574740484fa271999df243d83a9b865c5e7d1b862b79ec7acc8a24969ca7",
+      "title": "A framework of biomarkers for renal aging: a consensus statement by the Aging Biomarker Consortium.",
+      "publisher": "Life medicine",
+      "author": "Aging Biomarker Consortium",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42662941",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Aug",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "4f13ebfb49364f0c43b1b34f807f5ed59f8cc51bd1847b62ef3dae93d7051fbd",
+      "title": "Brain Bioenergetics in Aging: Neurovascular and Neurometabolic Coupling and Fuels: 15th International Conference on Brain Energy Metabolism.",
+      "publisher": "Journal of neurochemistry",
+      "author": "Drew KL",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42244173",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Jun",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "conference",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "4c7338d8268dec810a7c3b87b68e27b0b72c13178bc8ee670cd7c0763205a91a",
+      "title": "Health Care Ownership and Patient Care-A National Institute on Aging Workshop.",
+      "publisher": "JAMA",
+      "author": "Song Z",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42636013",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Sep 22",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "us",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "4b1eb2ccdb9e4559fe5f32a3fad0a39fdf201d6d2dea9fe3a036e8a439bcd0eb",
+      "title": "Promoting an international consensus on frailty assessment: An urgent call to address the challenges of perioperative management in an aging population.",
+      "publisher": "Bioscience trends",
+      "author": "Xia Y",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41621920",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 May 17",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "46efd45fe709af43dec320a253c28f07272b53d2717b37dd49efbc69606108b5",
+      "title": "[Expert consensus on optimizing the multidisciplinary clinical pathways and management models for pulmonary function testing].",
+      "publisher": "Zhonghua jie he he hu xi za zhi = Zhonghua jiehe he huxi zazhi = Chinese journal of tuberculosis and respiratory diseases",
+      "author": "Task Forces on Pulmonary Function Testing from Chinese Association of Chest Physicians (CACP)",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41912385",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Apr 12",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "43afae459818cfe2d0fcd9ab10c4d4ff2afbe0fd7ec75df497d3f2964f720e36",
+      "title": "Welcome to the Intrinsic Capacity, Frailty and Sarcopenia Research Conference for Healthy Longevity (ICFSR 2026) in Washington, DC.",
+      "publisher": "The Journal of frailty & aging",
+      "author": "Abadir PM",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42441408",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Sep",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "conference",
+        "geroscience",
+        "needs_review",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "408dcb86f9226819b834ac395728b3b39e57aff90f81c632013aabe0f60630df",
+      "title": "Overlap between body mass index- and height-adjusted sarcopenic obesity and their association with functional capacity in older adults with diabetes: A study based on the JWGSO consensus.",
+      "publisher": "Endocrine",
+      "author": "Ida S",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42043627",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Apr 27",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "408d07d982335ad8abd5e2f99c243ffe86a090a6c01cbae865f279f0d3012ab7",
+      "title": "Advancing Vaccination Strategies for Older Adults: Insights of the Adult Immunization Board Meeting.",
+      "publisher": "Drugs & aging",
+      "author": "Del Riccio M",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41792534",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Mar",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "geroscience",
+        "meeting",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "3ce1a421398c70fbbcc93af45be01af80d212d6d4cc3f1ad3419a4ad1abcb8b0",
+      "title": "[The European Society for Clinical Nutrition and Metabolism (ESPEN) Guideline on Clinical Nutrition and Hydration in Geriatrics].",
+      "publisher": "Revista espanola de geriatria y gerontologia",
+      "author": "Volkert D",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41820196",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Mar-Apr",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "geroscience",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "38ad351332ed7dba9c9f9a9a821385baf458a27e2dabd139491071fe2fb232e4",
+      "title": "[Expert consensus on vaccination for herpes zoster (2026 edition)].",
+      "publisher": "Zhonghua yi xue za zhi",
+      "author": "Varicella and Herpes Zoster Prevention and Control Branch of the China Association for Vaccines",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42595507",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Aug 18",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "321fc93f1ed11f9e2756e9544a5d044205725c447a3f2ad129b0f67dbabb2e9a",
+      "title": "Chinese expert consensus on dietary nutrition prescriptions and exercise intervention for sarcopenia (2025).",
+      "publisher": "Asia Pacific journal of clinical nutrition",
+      "author": "Sun J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41565227",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Feb",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "3197f17802b949da879b022814d2479e79f655bbf84701773acfc90421b06393",
+      "title": "Advancing aging biomarkers and intervention discovery at the TimePie Longevity Forum.",
+      "publisher": "Nature aging",
+      "author": "Ying K",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42816658",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Oct",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "forum",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "2627f165ac38e35e6b4d4873445b43f8f6f1387535aea912a18b4126da6c81da",
+      "title": "[Interpretation of the \"Expert consensus on diagnosis and treatment of refractory inner ear disease (2026 edition)\"].",
+      "publisher": "Zhonghua yi xue za zhi",
+      "author": "Zhang J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41912398",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Mar 31",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "23df06624e7700ed20dd3475dd7465da43b56caeda4896ad1acc91dd3771ff6a",
+      "title": "Special Issue: 5. Internationales Lymphologisches Symposium Die lange Nacht der Lymphologie Wien, Östereich, 21.-23. November 2024- 5th International Lymphology Symposium Long Night of Lymphology Vienna, Austria, November 21st to 23rd, 2024.",
+      "publisher": "Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39888325",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Jan",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "needs_review",
+        "symposium",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "1ba4a338d1f92d589620e0bb34bdc392d27f0f1ebc6c072ecb4b1924b2c38c45",
+      "title": "Mild Cognitive Impairment Diagnosis and Care Algorithms and the Role of Digital Interventions: Expert Consensus.",
+      "publisher": "CNS neuroscience & therapeutics",
+      "author": "Kandiah N",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42687507",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Sep",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "19f4c661fde6eecf0c2626bbc7ead004d57acdb2eaeca582445ae2ef8d62c992",
+      "title": "Scientific highlights and perspectives from Early-Career Geriatricians: insights from the 21st EuGMS Congress, Reykjavik 2025.",
+      "publisher": "European geriatric medicine",
+      "author": "Viegas A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42474659",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Aug",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "17817c28962281596dcfa2221cce0e0a7635ebdb7120380590ea730e3a67f830",
+      "title": "Blending Life and the Scalpel: A Financial Literacy Workshop for the Transition Beyond Training.",
+      "publisher": "The Journal of surgical research",
+      "author": "Godfrey M",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41579522",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Feb",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "needs_review",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "12f8c92ba48b15d213d4ef6b70414c4180b730985d6c6fce888ccee6743c2524",
+      "title": "[The European Society for Clinical Nutrition and Metabolism (ESPEN) Guideline on Clinical Nutrition and Hydration in Geriatrics].",
+      "publisher": "Nutricion hospitalaria",
+      "author": "Volkert D",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41810828",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Apr 23",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "geroscience",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "107941d1bf85083f8cf555d531ca5e026cadc7101f9a62138986497c9147aba4",
+      "title": "A focus shift from sarcopenia to muscle health in the Asian Working Group for Sarcopenia 2025 Consensus Update.",
+      "publisher": "Nature aging",
+      "author": "Chen LK",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41188603",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Nov",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "geroscience",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "0f4a19fd9a248a809496964e03d20d951f353e809cff101ae9b5581ea8d0ab14",
+      "title": "2026 Latin American consensus for the management of patients with hypertension and cardio-renal and metabolic disturbances: endorsed by the Latin American Society of Hypertension, the Iberoamerican Hypertension League, and the World Hypertension League.",
+      "publisher": "Journal of hypertension",
+      "author": "Coca A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41875318",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jun 1",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review",
+        "nutrition",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "0c4b3511a3d0964b15e93bd3cdf600c8da83474ecbe40fb3328b6e75526db815",
+      "title": "61(st) EASD Annual Meeting of the European Association for the Study of Diabetes : Vienna, Austria, 15 - 19 September 2025.",
+      "publisher": "Diabetologia",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40856843",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Sep",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "meeting",
+        "needs_review",
+        "nutrition",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "0a3ea4e3062ec54c8de162b280d0d46432a2b7e339407c5ef25edc0301eec759",
+      "title": "Older adults and extreme weather events: recommendations from the Research Centers Collaborative Network workshop.",
+      "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+      "author": "Choi EY",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42334962",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Jul 1",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "geroscience",
+        "needs_review",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "08645b857026cfe69da6c2af0a431641ab50455b2df8ebb208568a7e34229641",
+      "title": "A comparison of arteriovenous grafts and fistulas in lower extremity hemodialysis procedures: Presented at the Thirty-sixth European Congress of Radiology (ECR), Vienna, Austria, February 28-March 3, 2024; at the Thirty-fourth Spring Meeting of the Korean Society of Interventional Radiology (KSIR), Busan, Korea, May 24-25, 2024; and at the Eighteenth Annual Scientific Meeting of the Asia Pacific Society of Cardiovascular and Interventional Radiology (APSCVIR), Bangkok, Thailand, May 3-5, 2024.",
+      "publisher": "European journal of vascular and endovascular surgery : the official journal of the European Society for Vascular Surgery",
+      "author": "Jeong J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41746177",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2025 Jul",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe",
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "congress",
+        "europe",
+        "meeting",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "082a0b59bbda4cf94c05091db992f8ca4c7008f5071901b84d3fdd043c444bcf",
+      "title": "The European Society of Gynaecological Oncology position statement: promoting inclusive surgical ergonomics in gynecological oncology.",
+      "publisher": "International journal of gynecological cancer : official journal of the International Gynecological Cancer Society",
+      "author": "European Society of Gynaecological Oncology, Gender Equality Working Group",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41270513",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Jan",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "06b81f450ac6124f6534207c5259b43a3310de5d8ec48aaa21d156f1ff12cc32",
+      "title": "Special Issue: 6. Internationales Lymphologisches Symposium Die lange Nacht der Lymphologie Wien, Österreich, 27.-29. November 2025 - 6(th) International Lymphology Symposium Long Night of Lymphology Vienna, Austria, November 27(th) to 29(th), 2025.",
+      "publisher": "Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41620938",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Jan",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "needs_review",
+        "symposium",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "00f55c080347fa0e4d9e01abe1f26231d2928a13a0bdd1646b8184c343d2bdb9",
+      "title": "Life Course Vaccination Continuum (LCVAC): An Expert Consensus on Life Course Vaccination in India.",
+      "publisher": "Cureus",
+      "author": "Koul PA",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42388548",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 May",
+      "location": "asia",
+      "location_groups": [
+        "asia"
+      ],
+      "tags": [
+        "asia",
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    }
+  ]
+}

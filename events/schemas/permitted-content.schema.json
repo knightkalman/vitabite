@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Privately supplied, processing-authorized event descriptions",
+  "description": "Input-only material; do not commit or publish this bundle.",
+  "type": "object",
+  "required": ["schema_version", "items"],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "source_url",
+          "processing_authorized",
+          "authorization_basis",
+          "text"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://"
+          },
+          "processing_authorized": {
+            "const": true
+          },
+          "authorization_basis": {
+            "enum": [
+              "licensed_excerpt",
+              "public_domain",
+              "publisher_permission"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30000
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

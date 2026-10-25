@@ -1,4 +1,6 @@
 __pycache__/
 *.py[cod]
 .longevity-news-state/
+.longevity-events-state/
 news/permitted-content.json
+events/permitted-content.json
