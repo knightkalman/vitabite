@@ -1,47 +1,45 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-10-26T06:16:59Z",
-  "last_successful_collection": "2026-10-26T06:16:54Z",
-  "collection_status": "success",
-  "sources_succeeded": 6,
+  "generated_at": "2026-10-27T06:17:17Z",
+  "last_successful_collection": "2026-10-27T06:17:12Z",
+  "collection_status": "partial",
+  "sources_succeeded": 5,
   "sources_total": 6,
   "source_results": [
     {
       "source_id": "nature_aging_events",
-      "status": "success",
-      "fetched": 0,
-      "new": 0
+      "status": "failed"
     },
     {
       "source_id": "pubmed_events_vienna",
       "status": "success",
       "fetched": 20,
-      "new": 20
+      "new": 0
     },
     {
       "source_id": "pubmed_events_europe",
       "status": "success",
       "fetched": 11,
-      "new": 11
+      "new": 0
     },
     {
       "source_id": "pubmed_events_us",
       "status": "success",
       "fetched": 4,
-      "new": 4
+      "new": 0
     },
     {
       "source_id": "pubmed_events_asia",
       "status": "success",
       "fetched": 18,
-      "new": 18
+      "new": 0
     },
     {
       "source_id": "pubmed_events_global",
       "status": "success",
       "fetched": 25,
-      "new": 19
+      "new": 0
     }
   ],
   "items": [
