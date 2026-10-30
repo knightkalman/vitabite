@@ -1,17 +1,15 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-10-29T06:22:08Z",
-  "last_successful_collection": "2026-10-29T06:22:04Z",
-  "collection_status": "success",
-  "sources_succeeded": 6,
+  "generated_at": "2026-10-30T06:21:50Z",
+  "last_successful_collection": "2026-10-30T06:21:45Z",
+  "collection_status": "partial",
+  "sources_succeeded": 5,
   "sources_total": 6,
   "source_results": [
     {
       "source_id": "nature_aging_events",
-      "status": "success",
-      "fetched": 0,
-      "new": 0
+      "status": "failed"
     },
     {
       "source_id": "pubmed_events_vienna",
