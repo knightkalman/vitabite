@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-10-30T06:21:50Z",
-  "last_successful_collection": "2026-10-30T06:21:45Z",
+  "generated_at": "2026-10-31T06:20:23Z",
+  "last_successful_collection": "2026-10-31T06:20:18Z",
   "collection_status": "partial",
   "sources_succeeded": 5,
   "sources_total": 6,
@@ -39,7 +39,7 @@
       "source_id": "pubmed_events_global",
       "status": "success",
       "fetched": 25,
-      "new": 0
+      "new": 1
     }
   ],
   "items": [
@@ -421,6 +421,26 @@
         "asia",
         "consensus",
         "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "c04df28a4d7be51c7b2cf37f175759ffd2b16efe5e64f8357e8e5727c52d3785",
+      "title": "Designing cross-sector leadership dialogue for successful aging: a forum-based case study and preliminary participant evaluation.",
+      "publisher": "Frontiers in public health",
+      "author": "Pyrrou M",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42959678",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "forum",
+        "geroscience",
         "needs_review"
       ],
       "summary": null,
