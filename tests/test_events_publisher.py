@@ -69,6 +69,58 @@ class EventsMetadataPublisherTests(unittest.TestCase):
         self.assertEqual(item["review_state"], "candidate")
         self.assertIsNone(item["summary"])
 
+    def test_excludes_past_years_and_orders_upcoming_before_this_year_decreasing(self):
+        upcoming = collector.build_candidate(
+            source=self.source,
+            upstream_id="vienna-upcoming",
+            title="Upcoming Vienna Longevity Conference",
+            article_url=f"https://{self.source['allowed_domains'][0]}/articles/vienna-upcoming",
+            publication_date="2026-12-10",
+            author=None,
+            collected_at="2026-11-01T05:47:00Z",
+            run_id="test-run",
+            access_basis="public_feed_metadata",
+        )
+        past_sep = collector.build_candidate(
+            source=self.source,
+            upstream_id="vienna-sep",
+            title="September 2026 Vienna Symposium",
+            article_url=f"https://{self.source['allowed_domains'][0]}/articles/vienna-sep",
+            publication_date="2026-09-15",
+            author=None,
+            collected_at="2026-11-01T05:47:00Z",
+            run_id="test-run",
+            access_basis="public_feed_metadata",
+        )
+        past_2025 = collector.build_candidate(
+            source=self.source,
+            upstream_id="vienna-2025",
+            title="2025 Vienna Symposium",
+            article_url=f"https://{self.source['allowed_domains'][0]}/articles/vienna-2025",
+            publication_date="2025-11-20",
+            author=None,
+            collected_at="2026-11-01T05:47:00Z",
+            run_id="test-run",
+            access_basis="public_feed_metadata",
+        )
+        state = {
+            **self.state,
+            "latest_run": {
+                **self.state["latest_run"],
+                "started_at": "2026-11-01T05:47:00Z",
+            },
+            "items": [past_sep, past_2025, self.candidate, upcoming],
+        }
+        feed = build_public_feed(
+            state,
+            self.sources,
+            generated_at=datetime(2026, 11, 1, tzinfo=timezone.utc),
+        )
+        self.assertEqual(
+            [item["publication_date"] for item in feed["items"]],
+            ["2026-12-10", "2026-10-20", "2026-09-15"],
+        )
+
     def test_failed_run_does_not_overwrite_existing_feed(self):
         state_path = self.root / "candidates.json"
         output_path = self.root / "events.json"
@@ -97,3 +149,4 @@ class EventsMetadataPublisherTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

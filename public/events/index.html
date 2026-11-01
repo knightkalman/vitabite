@@ -44,7 +44,7 @@
           <p class="eyebrow"><span class="eyebrow-dot"></span> The VitaBite calendar</p>
           <h1 id="page-title">Longevity,<br><em>in person.</em></h1>
           <p class="hero-lede">Conferences, symposia, workshops, and congresses where aging science and nutrition meet around the world.</p>
-          <p class="hero-description">A source-led index of scientific meetings and gatherings — starting in our home city of Vienna and spanning Europe, the United States, Asia, and global forums.</p>
+          <p class="hero-description">A source-led index of scientific meetings and gatherings — showing upcoming events first and current-year proceedings in decreasing date order across Vienna, Europe, the United States, Asia, and global forums.</p>
         </div>
         <aside class="editorial-card" aria-label="Editorial approach">
           <span class="editorial-star" aria-hidden="true">✳</span>
@@ -63,7 +63,7 @@
         <span class="notice-icon" aria-hidden="true">i</span>
         <div>
           <h2 id="notice-title">A note on where things stand</h2>
-          <p>Conferences, symposia, and event records from the latest successful background collection are listed below as source-linked metadata. Their location groupings (Vienna, Europe, US, Asia, All) and tags are automated and provisional; they have not been editorially reviewed, and no generated summaries are provided. Follow the original source link for official dates, venues, and proceedings.</p>
+          <p>Conferences, symposia, and event records from the latest successful background collection are listed below as source-linked metadata. Upcoming events are displayed first, followed by events from this year in decreasing date order. Location groupings (Vienna, Europe, US, Asia, All) and tags are automated and provisional. Follow the original source link for official dates, venues, and proceedings.</p>
         </div>
         <span class="notice-status">METADATA ONLY<br>NOT EDITORIALLY REVIEWED</span>
       </section>
@@ -77,14 +77,24 @@
           <p id="feed-freshness" class="feed-freshness">Feed status: loading source metadata.</p>
         </div>
 
-        <div class="filter-bar" aria-label="Filter events by location">
-          <span class="filter-label">Location</span>
-          <div class="filter-options" role="group" aria-label="Event location">
-            <button class="filter-button is-active" type="button" data-location="all" aria-pressed="true">All</button>
-            <button class="filter-button" type="button" data-location="vienna" aria-pressed="false">Vienna</button>
-            <button class="filter-button" type="button" data-location="europe" aria-pressed="false">Europe</button>
-            <button class="filter-button" type="button" data-location="us" aria-pressed="false">US</button>
-            <button class="filter-button" type="button" data-location="asia" aria-pressed="false">Asia</button>
+        <div class="filter-bar" aria-label="Filter events by schedule and location">
+          <div class="filter-group">
+            <span class="filter-label">Schedule</span>
+            <div class="filter-options" role="group" aria-label="Event timeframe">
+              <button class="filter-button is-active" type="button" data-timeframe="upcoming" aria-pressed="true">Upcoming</button>
+              <button class="filter-button" type="button" data-timeframe="past" aria-pressed="false">Past (this year)</button>
+              <button class="filter-button" type="button" data-timeframe="all" aria-pressed="false">All (upcoming &amp; this year)</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Location</span>
+            <div class="filter-options" role="group" aria-label="Event location">
+              <button class="filter-button is-active" type="button" data-location="all" aria-pressed="true">All</button>
+              <button class="filter-button" type="button" data-location="vienna" aria-pressed="false">Vienna</button>
+              <button class="filter-button" type="button" data-location="europe" aria-pressed="false">Europe</button>
+              <button class="filter-button" type="button" data-location="us" aria-pressed="false">US</button>
+              <button class="filter-button" type="button" data-location="asia" aria-pressed="false">Asia</button>
+            </div>
           </div>
         </div>
 

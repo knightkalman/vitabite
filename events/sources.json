@@ -36,6 +36,32 @@
       "last_checked_date": "2026-10-25"
     },
     {
+      "source_id": "pubmed_events_upcoming",
+      "name": "PubMed Upcoming Longevity & Health Conferences",
+      "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
+      "feed_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "source_type": "pubmed_eutils",
+      "format": "json",
+      "allowed_domains": [
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "query": "(congress[Title] OR conference[Title] OR symposium[Title] OR workshop[Title] OR summit[Title] OR forum[Title] OR \"annual meeting\"[Title] OR colloquium[Title] OR consensus[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR geriatrics[Title/Abstract] OR gerontology[Title/Abstract] OR nutrition[Title/Abstract] OR dietary[Title/Abstract] OR metabolic[Title/Abstract] OR health[Title/Abstract] OR clinical[Title/Abstract]) AND (\"2026/11/01\"[PDAT] : \"2027/12/31\"[PDAT])",
+      "date_window_days": 365,
+      "max_results": 30,
+      "topic_coverage": [
+        "upcoming longevity conferences",
+        "upcoming clinical symposia",
+        "upcoming consensus workshops"
+      ],
+      "update_cadence": "continuous; checked daily for upcoming event dates",
+      "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
+      "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
+      "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "trust_tier": "primary_bibliographic_index",
+      "enabled": true,
+      "last_checked_date": "2026-10-25"
+    },
+    {
       "source_id": "pubmed_events_vienna",
       "name": "PubMed Vienna & Austria Longevity Events",
       "publisher": "U.S. National Library of Medicine, National Center for Biotechnology Information",
@@ -46,15 +72,15 @@
         "pubmed.ncbi.nlm.nih.gov"
       ],
       "default_location": "vienna",
-      "query": "(Vienna[Title/Abstract] OR Wien[Title/Abstract]) AND (congress[Title] OR conference[Title] OR symposium[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR abstracts[Title])",
-      "date_window_days": 730,
-      "max_results": 20,
+      "query": "(Vienna[Title/Abstract] OR Wien[Title/Abstract] OR Austria[Title/Abstract] OR Austrian[Title/Abstract]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR geriatrics[Title/Abstract] OR gerontology[Title/Abstract] OR nutrition[Title/Abstract] OR clinical[Title/Abstract] OR healthcare[Title/Abstract]) AND (congress[Title/Abstract] OR conference[Title/Abstract] OR symposium[Title/Abstract] OR workshop[Title/Abstract] OR meeting[Title/Abstract] OR summit[Title/Abstract] OR forum[Title/Abstract] OR consensus[Title/Abstract] OR society[Title/Abstract]) AND (\"2026/01/01\"[PDAT] : \"2027/12/31\"[PDAT])",
+      "date_window_days": 365,
+      "max_results": 25,
       "topic_coverage": [
         "Vienna conferences",
         "Austrian medical congresses",
         "European symposia in Vienna"
       ],
-      "update_cadence": "continuous; checked daily with a 730-day conference window",
+      "update_cadence": "continuous; checked daily with a current-year conference window",
       "permitted_collection_method": "Use NCBI E-utilities ESearch and ESummary public APIs for bibliographic event/congress metadata only; respect NCBI usage policies and rate limits.",
       "terms_notes": "Do not retrieve or republish article full text or abstracts in this collector. NCBI API use is subject to NCBI usage guidelines and the terms applicable to each record.",
       "terms_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
@@ -73,7 +99,7 @@
         "pubmed.ncbi.nlm.nih.gov"
       ],
       "default_location": "europe",
-      "query": "(Europe[Title/Abstract] OR European[Title/Abstract] OR EuGMS[Title/Abstract] OR ARDD[Title/Abstract] OR London[Title/Abstract] OR Berlin[Title/Abstract] OR Zurich[Title/Abstract] OR Basel[Title/Abstract] OR Paris[Title/Abstract] OR Amsterdam[Title/Abstract] OR Copenhagen[Title/Abstract] OR Madrid[Title/Abstract] OR Milan[Title/Abstract] OR Rome[Title/Abstract] OR Geneva[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR geriatrics[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR society[Title])",
+      "query": "(Europe[Title/Abstract] OR European[Title/Abstract] OR EuGMS[Title/Abstract] OR ARDD[Title/Abstract] OR London[Title/Abstract] OR Berlin[Title/Abstract] OR Zurich[Title/Abstract] OR Basel[Title/Abstract] OR Paris[Title/Abstract] OR Amsterdam[Title/Abstract] OR Copenhagen[Title/Abstract] OR Madrid[Title/Abstract] OR Milan[Title/Abstract] OR Rome[Title/Abstract] OR Geneva[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR geriatrics[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR society[Title]) AND (\"2026/01/01\"[PDAT] : \"2027/12/31\"[PDAT])",
       "date_window_days": 365,
       "max_results": 20,
       "topic_coverage": [
@@ -100,7 +126,7 @@
         "pubmed.ncbi.nlm.nih.gov"
       ],
       "default_location": "us",
-      "query": "(\"United States\"[Title/Abstract] OR American[Title] OR \"National Institute on Aging\"[Title/Abstract] OR Midwest[Title/Abstract] OR Boston[Title/Abstract] OR \"San Francisco\"[Title/Abstract] OR \"San Diego\"[Title/Abstract] OR \"New York\"[Title/Abstract] OR Bethesda[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title])",
+      "query": "(\"United States\"[Title/Abstract] OR American[Title] OR \"National Institute on Aging\"[Title/Abstract] OR Midwest[Title/Abstract] OR Boston[Title/Abstract] OR \"San Francisco\"[Title/Abstract] OR \"San Diego\"[Title/Abstract] OR \"New York\"[Title/Abstract] OR Bethesda[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title]) AND (\"2026/01/01\"[PDAT] : \"2027/12/31\"[PDAT])",
       "date_window_days": 365,
       "max_results": 20,
       "topic_coverage": [
@@ -127,7 +153,7 @@
         "pubmed.ncbi.nlm.nih.gov"
       ],
       "default_location": "asia",
-      "query": "(Asia[Title/Abstract] OR Asian[Title/Abstract] OR Singapore[Title/Abstract] OR Tokyo[Title/Abstract] OR Japan[Title/Abstract] OR Japanese[Title] OR Korea[Title/Abstract] OR Seoul[Title/Abstract] OR China[Title/Abstract] OR Shanghai[Title/Abstract] OR Beijing[Title/Abstract] OR \"Hong Kong\"[Title/Abstract] OR Taiwan[Title/Abstract] OR India[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR geriatrics[Title/Abstract] OR aging[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR consensus[Title])",
+      "query": "(Asia[Title/Abstract] OR Asian[Title/Abstract] OR Singapore[Title/Abstract] OR Tokyo[Title/Abstract] OR Japan[Title/Abstract] OR Japanese[Title] OR Korea[Title/Abstract] OR Seoul[Title/Abstract] OR China[Title/Abstract] OR Shanghai[Title/Abstract] OR Beijing[Title/Abstract] OR \"Hong Kong\"[Title/Abstract] OR Taiwan[Title/Abstract] OR Taiwanese[Title/Abstract] OR India[Title/Abstract]) AND (longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR geriatrics[Title/Abstract] OR aging[Title] OR dementia[Title/Abstract]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR meeting[Title] OR summit[Title] OR forum[Title] OR consensus[Title]) AND (\"2026/01/01\"[PDAT] : \"2027/12/31\"[PDAT])",
       "date_window_days": 365,
       "max_results": 20,
       "topic_coverage": [
@@ -153,7 +179,7 @@
       "allowed_domains": [
         "pubmed.ncbi.nlm.nih.gov"
       ],
-      "query": "(longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR aging[Title] OR ageing[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR summit[Title] OR forum[Title] OR meeting[Title] OR colloquium[Title])",
+      "query": "(longevity[Title/Abstract] OR \"healthy aging\"[Title/Abstract] OR \"healthy ageing\"[Title/Abstract] OR geroscience[Title/Abstract] OR gerontology[Title/Abstract] OR aging[Title] OR ageing[Title]) AND (conference[Title] OR symposium[Title] OR congress[Title] OR workshop[Title] OR summit[Title] OR forum[Title] OR meeting[Title] OR colloquium[Title]) AND (\"2026/01/01\"[PDAT] : \"2027/12/31\"[PDAT])",
       "date_window_days": 365,
       "max_results": 25,
       "topic_coverage": [

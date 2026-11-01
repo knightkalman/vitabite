@@ -94,3 +94,4 @@ It uses the exact same search engines, feed types, and collection methods as
   expire after 90 days.
 - The public `/events/` page displays the timestamp of the last successful
   collection and flags the feed as stale after three days.
+

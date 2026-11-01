@@ -6,13 +6,39 @@ const LOCATION_LABELS = {
   other: "Global",
 };
 
+const TIMEFRAME_LABELS = {
+  upcoming: "Upcoming",
+  past: "Past (this year)",
+  all: "All (upcoming & this year)",
+};
+
+const MONTH_MAP = {
+  jan: 1,
+  feb: 2,
+  mar: 3,
+  apr: 4,
+  may: 5,
+  jun: 6,
+  jul: 7,
+  aug: 8,
+  sep: 9,
+  oct: 10,
+  nov: 11,
+  dec: 12,
+};
+
 const storyList = document.querySelector("#story-list");
 const feedFreshness = document.querySelector("#feed-freshness");
 const filterStatus = document.querySelector("#filter-status");
 const headlineCount = document.querySelector("#headline-count");
-const filterButtons = [...document.querySelectorAll("[data-location]")];
+const locationButtons = [...document.querySelectorAll("[data-location]")];
+const timeframeButtons = [...document.querySelectorAll("[data-timeframe]")];
+
 let events = [];
 let selectedLocation = "all";
+let selectedTimeframe = "upcoming";
+let referenceDateIso = new Date().toISOString().slice(0, 10);
+let currentYear = Number(referenceDateIso.slice(0, 4));
 let feedError = false;
 
 function escapeHtml(value) {
@@ -35,6 +61,105 @@ function safeSourceUrl(value) {
   } catch {
     return null;
   }
+}
+
+function pad2(num) {
+  return String(num).padStart(2, "0");
+}
+
+function lastDayOfMonth(year, month) {
+  return new Date(Date.UTC(year, month, 0)).getUTCDate();
+}
+
+function parseMonthToken(token) {
+  if (!token) {
+    return null;
+  }
+  const clean = token.trim().replace(/\.$/, "").toLowerCase();
+  if (/^\d{1,2}$/.test(clean)) {
+    const num = Number(clean);
+    return num >= 1 && num <= 12 ? num : null;
+  }
+  return MONTH_MAP[clean.slice(0, 3)] ?? null;
+}
+
+function resolveEffectiveDateIso(eventItem) {
+  if (
+    typeof eventItem.publication_date === "string" &&
+    /^\d{4}-\d{2}-\d{2}$/.test(eventItem.publication_date)
+  ) {
+    return eventItem.publication_date;
+  }
+  const raw = (eventItem.publication_date_raw || "").trim();
+  if (raw) {
+    const ymd = raw.match(/^(\d{4})[\s/-]+([A-Za-z]+|\d{1,2})[\s/-]+(\d{1,2})$/);
+    if (ymd) {
+      const year = Number(ymd[1]);
+      const month = parseMonthToken(ymd[2]);
+      const day = Number(ymd[3]);
+      if (month && day >= 1 && day <= 31) {
+        return `${year}-${pad2(month)}-${pad2(day)}`;
+      }
+    }
+    const ym = raw.match(
+      /^(\d{4})[\s/-]+([A-Za-z]+|\d{1,2})(?:-([A-Za-z]+|\d{1,2}))?$/,
+    );
+    if (ym) {
+      const year = Number(ym[1]);
+      const month = parseMonthToken(ym[3] || ym[2]);
+      if (month) {
+        return `${year}-${pad2(month)}-${pad2(lastDayOfMonth(year, month))}`;
+      }
+    }
+    if (/^\d{4}$/.test(raw)) {
+      const year = Number(raw);
+      const title = eventItem.title || "";
+      if (/oktober\s+2026|october\s+2026/i.test(title)) {
+        return `${year}-10-12`;
+      }
+      return `${year}-01-01`;
+    }
+  }
+  return null;
+}
+
+function isFromCurrentOrFutureYear(eventItem) {
+  const effectiveIso = resolveEffectiveDateIso(eventItem);
+  if (!effectiveIso) {
+    return false;
+  }
+  const eventYear = Number(effectiveIso.slice(0, 4));
+  if (eventYear < currentYear) {
+    return false;
+  }
+  const yearsInTitle = [...(eventItem.title || "").matchAll(/\b(202\d)\b/g)].map(
+    (match) => Number(match[1]),
+  );
+  if (yearsInTitle.length > 0 && Math.max(...yearsInTitle) < currentYear) {
+    return false;
+  }
+  return true;
+}
+
+function isUpcomingEvent(eventItem) {
+  const effectiveIso = resolveEffectiveDateIso(eventItem);
+  return Boolean(effectiveIso && effectiveIso >= referenceDateIso);
+}
+
+function sortEventsUpcomingFirstThenDecreasing(items) {
+  return [...items].sort((a, b) => {
+    const aUpcoming = isUpcomingEvent(a) ? 1 : 0;
+    const bUpcoming = isUpcomingEvent(b) ? 1 : 0;
+    if (aUpcoming !== bUpcoming) {
+      return bUpcoming - aUpcoming;
+    }
+    const aDate = resolveEffectiveDateIso(a) || "";
+    const bDate = resolveEffectiveDateIso(b) || "";
+    if (aDate !== bDate) {
+      return bDate.localeCompare(aDate);
+    }
+    return String(b.item_id || "").localeCompare(String(a.item_id || ""));
+  });
 }
 
 function displayDate(value, precision = "day", rawValue = null) {
@@ -84,6 +209,17 @@ function matchesLocation(eventItem, locationFilter) {
   return false;
 }
 
+function matchesTimeframe(eventItem, timeframeFilter) {
+  const upcoming = isUpcomingEvent(eventItem);
+  if (timeframeFilter === "upcoming") {
+    return upcoming;
+  }
+  if (timeframeFilter === "past") {
+    return !upcoming;
+  }
+  return true;
+}
+
 function formatLocationBadge(eventItem, isCandidate) {
   const groups = Array.isArray(eventItem.location_groups)
     ? eventItem.location_groups
@@ -102,8 +238,10 @@ function renderEvents() {
   if (feedError) {
     return;
   }
-  const visibleEvents = events.filter((eventItem) =>
-    matchesLocation(eventItem, selectedLocation),
+  const visibleEvents = events.filter(
+    (eventItem) =>
+      matchesTimeframe(eventItem, selectedTimeframe) &&
+      matchesLocation(eventItem, selectedLocation),
   );
 
   filterStatus.textContent =
@@ -121,12 +259,14 @@ function renderEvents() {
         foot: "NO SOURCE RECORDS IN THIS FEED",
       });
     } else {
+      const timeframeLabel = TIMEFRAME_LABELS[selectedTimeframe] ?? "Selected timeframe";
+      const locationLabel = LOCATION_LABELS[selectedLocation] ?? "All locations";
       setFeedMessage({
         label: "A quieter corner",
-        heading: "No events in this location group yet.",
+        heading: "No events match this filter combination.",
         description:
-          "Try another location filter (such as Europe or All) to browse the conferences and symposia currently in the collection.",
-        foot: LOCATION_LABELS[selectedLocation]?.toUpperCase() ?? "NO EVENTS",
+          "Try switching between Upcoming and Past (this year) or choosing another location group.",
+        foot: `${timeframeLabel.toUpperCase()} · ${locationLabel.toUpperCase()}`,
       });
     }
     return;
@@ -162,6 +302,11 @@ function renderEvents() {
         eventItem.publication_date_raw,
       );
       const isCandidate = eventItem.review_state === "candidate";
+      const upcoming = isUpcomingEvent(eventItem);
+      const timeframeBadgeText = upcoming
+        ? "Upcoming"
+        : `Past · ${currentYear}`;
+      const timeframeBadgeClass = upcoming ? "is-upcoming" : "is-past";
       const summary = isCandidate
         ? "Source event listing only. No summary or editorial review has been provided."
         : eventItem.summary;
@@ -170,6 +315,7 @@ function renderEvents() {
       return `
         <article class="story-card">
           <div class="story-meta">
+            <span class="event-timeframe-badge ${timeframeBadgeClass}">${escapeHtml(timeframeBadgeText)}</span>
             <span class="story-category">${escapeHtml(locationLabel)}</span>
             <span>${escapeHtml(publicationDate)}</span>
             <span>${escapeHtml(eventItem.publisher)}</span>
@@ -242,12 +388,16 @@ async function loadFeed() {
       throw new Error("Feed metadata does not match the expected public schema");
     }
 
+    if (
+      typeof feed.last_successful_collection === "string" &&
+      /^\d{4}-\d{2}-\d{2}/.test(feed.last_successful_collection)
+    ) {
+      referenceDateIso = feed.last_successful_collection.slice(0, 10);
+      currentYear = Number(referenceDateIso.slice(0, 4));
+    }
+
     updateFreshness(feed);
-    const candidateCount = feed.items.filter(
-      (eventItem) => eventItem.review_state === "candidate",
-    ).length;
-    headlineCount.textContent = `${candidateCount} collected event${candidateCount === 1 ? "" : "s"} · unreviewed`;
-    events = feed.items.filter(
+    const validItems = feed.items.filter(
       (eventItem) =>
         (eventItem.review_state === "candidate" ||
           (eventItem.review_state === "approved" &&
@@ -259,8 +409,14 @@ async function loadFeed() {
         eventItem.tags.every((tag) => typeof tag === "string") &&
         Array.isArray(eventItem.location_groups) &&
         LOCATION_LABELS[eventItem.location] &&
-        safeSourceUrl(eventItem.source_url),
+        safeSourceUrl(eventItem.source_url) &&
+        isFromCurrentOrFutureYear(eventItem),
     );
+    events = sortEventsUpcomingFirstThenDecreasing(validItems);
+    const upcomingCount = events.filter((eventItem) =>
+      isUpcomingEvent(eventItem),
+    ).length;
+    headlineCount.textContent = `${upcomingCount} upcoming · ${events.length} total (${currentYear}) · unreviewed`;
     renderEvents();
   } catch {
     feedError = true;
@@ -279,10 +435,22 @@ async function loadFeed() {
   }
 }
 
-filterButtons.forEach((button) => {
+timeframeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectedTimeframe = button.dataset.timeframe;
+    timeframeButtons.forEach((filterButton) => {
+      const active = filterButton === button;
+      filterButton.classList.toggle("is-active", active);
+      filterButton.setAttribute("aria-pressed", String(active));
+    });
+    renderEvents();
+  });
+});
+
+locationButtons.forEach((button) => {
   button.addEventListener("click", () => {
     selectedLocation = button.dataset.location;
-    filterButtons.forEach((filterButton) => {
+    locationButtons.forEach((filterButton) => {
       const active = filterButton === button;
       filterButton.classList.toggle("is-active", active);
       filterButton.setAttribute("aria-pressed", String(active));

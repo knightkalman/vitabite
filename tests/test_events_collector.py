@@ -98,6 +98,64 @@ class LocationClassificationTests(unittest.TestCase):
         self.assertEqual(location, "vienna")
         self.assertEqual(groups, ["vienna", "europe"])
 
+    def test_parses_pubmed_day_and_month_dates_and_orders_upcoming_first(self):
+        self.assertEqual(
+            collector.parse_publication_date("2026 Oct 21"),
+            ("2026-10-21", "day", "2026 Oct 21"),
+        )
+        self.assertEqual(
+            collector.parse_publication_date("2026 Nov-Dec"),
+            (None, "month", "2026 Nov-Dec"),
+        )
+        ref = datetime(2026, 11, 1, tzinfo=timezone.utc).date()
+        upcoming_item = {
+            "item_id": "a" * 64,
+            "title": "Upcoming Longevity Conference",
+            "publication_date": None,
+            "publication_date_precision": "month",
+            "publication_date_raw": "2026 Dec",
+        }
+        past_2026_newer = {
+            "item_id": "b" * 64,
+            "title": "October 2026 Symposium",
+            "publication_date": "2026-10-21",
+            "publication_date_precision": "day",
+            "publication_date_raw": "2026 Oct 21",
+        }
+        past_2026_older = {
+            "item_id": "c" * 64,
+            "title": "February 2026 Workshop",
+            "publication_date": "2026-02-05",
+            "publication_date_precision": "day",
+            "publication_date_raw": "2026 Feb 5",
+        }
+        past_2025_item = {
+            "item_id": "d" * 64,
+            "title": "2025 Congress Report",
+            "publication_date": "2025-11-15",
+            "publication_date_precision": "day",
+            "publication_date_raw": "2025 Nov 15",
+        }
+        self.assertTrue(collector.is_current_or_future_year_event(upcoming_item, 2026))
+        self.assertTrue(collector.is_current_or_future_year_event(past_2026_newer, 2026))
+        self.assertFalse(collector.is_current_or_future_year_event(past_2025_item, 2026))
+        self.assertTrue(collector.is_upcoming_event(upcoming_item, ref))
+        self.assertFalse(collector.is_upcoming_event(past_2026_newer, ref))
+
+        ordered = sorted(
+            [past_2026_older, upcoming_item, past_2026_newer],
+            key=lambda item: collector.event_sort_key(item, ref),
+            reverse=True,
+        )
+        self.assertEqual(
+            [item["title"] for item in ordered],
+            [
+                "Upcoming Longevity Conference",
+                "October 2026 Symposium",
+                "February 2026 Workshop",
+            ],
+        )
+
 
 class EventParserTests(unittest.TestCase):
     def test_parses_rss_and_filters_to_event_items(self):
@@ -210,3 +268,4 @@ class EventCollectionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
