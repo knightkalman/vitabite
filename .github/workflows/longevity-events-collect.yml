@@ -110,3 +110,4 @@ jobs:
           path: .longevity-events-state/candidates.json
           if-no-files-found: warn
           retention-days: 90
+

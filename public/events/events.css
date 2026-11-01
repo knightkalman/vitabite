@@ -432,11 +432,21 @@ h2 em {
 .filter-bar {
   display: flex;
   min-height: 67px;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
+  justify-content: space-between;
+  gap: 16px 28px;
+  padding-block: 14px;
   margin-top: 37px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 
 .filter-label {
@@ -559,6 +569,27 @@ h2 em {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.event-timeframe-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 3px 8px;
+  border-radius: 99px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.event-timeframe-badge.is-upcoming {
+  background: var(--lime);
+  color: var(--forest-dark);
+}
+
+.event-timeframe-badge.is-past {
+  background: #e6e7dc;
+  color: #636b5f;
 }
 
 .story-review-label {
@@ -1052,3 +1083,4 @@ h2 em {
     transition-duration: 0.01ms !important;
   }
 }
+

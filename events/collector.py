@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import calendar
 import hashlib
 import json
 import os
@@ -64,6 +65,7 @@ LOCATION_TERMS: tuple[tuple[str, tuple[str, ...]], ...] = (
             "eaps",
             "escp",
             "eacts",
+            "ebmt",
             "austria",
             "austrian",
             "österreich",
@@ -96,6 +98,8 @@ LOCATION_TERMS: tuple[tuple[str, tuple[str, ...]], ...] = (
             "bern",
             "united kingdom",
             "british",
+            "scotland",
+            "scottish",
             "london",
             "oxford",
             "edinburgh",
@@ -160,9 +164,11 @@ LOCATION_TERMS: tuple[tuple[str, tuple[str, ...]], ...] = (
             "united states",
             "u.s.a.",
             "u.s.",
+            "us fda",
             "american",
             "national institute on aging",
             "midwest aging",
+            "rhode island",
             "boston",
             "san francisco",
             "san diego",
@@ -212,6 +218,7 @@ LOCATION_TERMS: tuple[tuple[str, tuple[str, ...]], ...] = (
             "guangzhou",
             "hong kong",
             "taiwan",
+            "taiwanese",
             "taipei",
             "india",
             "indian",
@@ -336,6 +343,17 @@ def canonicalize_url(raw_url: str, allowed_domains: list[str]) -> str:
     )
 
 
+def _parse_month_token(token: str) -> int | None:
+    cleaned = token.strip().rstrip(".")
+    if cleaned.isdigit():
+        month_num = int(cleaned)
+        return month_num if 1 <= month_num <= 12 else None
+    try:
+        return datetime.strptime(cleaned[:3].title(), "%b").month
+    except ValueError:
+        return None
+
+
 def parse_date(raw_date: str) -> str | None:
     value = raw_date.strip()
     if not value:
@@ -349,7 +367,18 @@ def parse_date(raw_date: str) -> str | None:
         parsed = parsedate_to_datetime(value)
         return parsed.date().isoformat()
     except (TypeError, ValueError, OverflowError):
-        return None
+        pass
+    ymd_match = re.fullmatch(r"(\d{4})[\s/-]+([A-Za-z]+|\d{1,2})[\s/-]+(\d{1,2})", value)
+    if ymd_match:
+        year = int(ymd_match.group(1))
+        month = _parse_month_token(ymd_match.group(2))
+        day = int(ymd_match.group(3))
+        if month is not None:
+            try:
+                return date(year, month, day).isoformat()
+            except ValueError:
+                return None
+    return None
 
 
 def parse_publication_date(raw_date: str) -> tuple[str | None, str, str | None]:
@@ -361,18 +390,77 @@ def parse_publication_date(raw_date: str) -> tuple[str | None, str, str | None]:
         return parsed, "day", value[:80]
     if re.fullmatch(r"\d{4}", value):
         return None, "year", value
-    partial_month = re.fullmatch(r"(\d{4})[\s/-]+([A-Za-z]+|\d{1,2})", value)
+    partial_month = re.fullmatch(
+        r"(\d{4})[\s/-]+([A-Za-z]+|\d{1,2})(?:-([A-Za-z]+|\d{1,2}))?",
+        value,
+    )
     if partial_month:
-        month = partial_month.group(2)
-        try:
-            month_number = int(month) if month.isdigit() else datetime.strptime(
-                month[:3], "%b"
-            ).month
-        except ValueError:
-            return None, "unknown", value[:80]
-        if 1 <= month_number <= 12:
+        month_token = partial_month.group(3) or partial_month.group(2)
+        if _parse_month_token(month_token) is not None:
             return None, "month", value[:80]
     return None, "unknown", value[:80]
+
+
+def effective_event_date(item: dict[str, Any]) -> date | None:
+    """Resolve an item's effective date for year filtering and upcoming/past ordering."""
+    pub_date = item.get("publication_date")
+    if isinstance(pub_date, str) and pub_date:
+        try:
+            return date.fromisoformat(pub_date)
+        except ValueError:
+            pass
+    raw = (item.get("publication_date_raw") or "").strip()
+    if raw:
+        parsed = parse_date(raw)
+        if parsed:
+            return date.fromisoformat(parsed)
+        partial_month = re.fullmatch(
+            r"(\d{4})[\s/-]+([A-Za-z]+|\d{1,2})(?:-([A-Za-z]+|\d{1,2}))?",
+            raw,
+        )
+        if partial_month:
+            year = int(partial_month.group(1))
+            month_token = partial_month.group(3) or partial_month.group(2)
+            month = _parse_month_token(month_token)
+            if month is not None:
+                last_day = calendar.monthrange(year, month)[1]
+                return date(year, month, last_day)
+        if re.fullmatch(r"\d{4}", raw):
+            year = int(raw)
+            title = item.get("title", "")
+            # Check for German/English October in title (e.g. "9. bis 12. Oktober 2026")
+            if re.search(r"oktober\s+2026|october\s+2026", title, re.IGNORECASE):
+                return date(year, 10, 12)
+            return date(year, 1, 1)
+    return None
+
+
+def is_current_or_future_year_event(item: dict[str, Any], current_year: int) -> bool:
+    """Keep only events from the current year or later, excluding past-year conferences."""
+    eff_date = effective_event_date(item)
+    if eff_date is None or eff_date.year < current_year:
+        return False
+    title = item.get("title", "")
+    years_in_title = [int(y) for y in re.findall(r"\b(202\d)\b", title)]
+    if years_in_title and max(years_in_title) < current_year:
+        return False
+    return True
+
+
+def is_upcoming_event(item: dict[str, Any], reference_date: date) -> bool:
+    """Return True if the event's effective date is on or after reference_date."""
+    eff_date = effective_event_date(item)
+    if eff_date is None:
+        return False
+    return eff_date >= reference_date
+
+
+def event_sort_key(item: dict[str, Any], reference_date: date) -> tuple[bool, str, str]:
+    """Sort upcoming events first, then events from this year in decreasing date."""
+    eff_date = effective_event_date(item)
+    eff_iso = eff_date.isoformat() if eff_date else ""
+    upcoming = is_upcoming_event(item, reference_date)
+    return (upcoming, eff_iso, item["item_id"])
 
 
 def _keyword_matches(text: str, keyword: str) -> bool:
@@ -420,8 +508,14 @@ def classify_location(
         if any(_keyword_matches(target_text, keyword) for keyword in keywords):
             matched_groups.add(region)
 
-    if not matched_groups and default_location in ALLOWED_LOCATION_GROUPS:
-        matched_groups.add(default_location)
+    if default_location in ALLOWED_LOCATION_GROUPS and not is_us_vienna:
+        if not matched_groups:
+            matched_groups.add(default_location)
+        elif default_location == "vienna" and not any(
+            _keyword_matches(combined, city)
+            for city in ("innsbruck", "graz", "salzburg", "heidelberg", "berlin", "munich", "zurich")
+        ):
+            matched_groups.add("vienna")
 
     primary_location, ordered_groups = normalize_location_groups(
         "other", matched_groups
@@ -867,6 +961,8 @@ def collect(
     now: datetime | None = None,
 ) -> tuple[dict[str, Any], int]:
     run_time = now or utc_now()
+    reference_date = run_time.date()
+    current_year = reference_date.year
     collected_at = iso_datetime(run_time)
     sources = load_sources(sources_path)
     state = load_state(state_path)
@@ -876,6 +972,7 @@ def collect(
         item_id: item
         for item_id, item in by_id.items()
         if date.fromisoformat(item["collected_at"][:10]) >= cutoff
+        and is_current_or_future_year_event(item, current_year)
     }
     source_results = []
     successful_sources = 0
@@ -895,6 +992,8 @@ def collect(
             successful_sources += 1
             source_new_count = 0
             for candidate in candidates:
+                if not is_current_or_future_year_event(candidate, current_year):
+                    continue
                 item_id = candidate["item_id"]
                 if item_id not in by_id:
                     by_id[item_id] = candidate
@@ -939,10 +1038,7 @@ def collect(
         },
         "items": sorted(
             by_id.values(),
-            key=lambda item: (
-                item.get("publication_date") or "",
-                item["item_id"],
-            ),
+            key=lambda item: event_sort_key(item, reference_date),
             reverse=True,
         ),
     }

@@ -10,7 +10,14 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit
 
-from events.collector import CollectionError, iso_datetime, load_sources, validate_candidate
+from events.collector import (
+    CollectionError,
+    event_sort_key,
+    is_current_or_future_year_event,
+    iso_datetime,
+    load_sources,
+    validate_candidate,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -68,22 +75,27 @@ def build_public_feed(
     if not isinstance(state.get("items"), list):
         raise CollectionError("collector state has no candidate list")
 
+    run_timestamp = latest_run.get("started_at")
+    try:
+        run_dt = datetime.fromisoformat(run_timestamp.replace("Z", "+00:00"))
+    except (AttributeError, TypeError, ValueError) as error:
+        raise CollectionError("collector run timestamp is invalid") from error
+    generated_time = generated_at or datetime.now(timezone.utc)
+    reference_date = run_dt.date()
+    current_year = reference_date.year
+
     enabled_sources = {source["source_id"]: source for source in sources}
     items_by_id: dict[str, dict[str, Any]] = {}
     for candidate in state["items"]:
         if candidate.get("source_id") not in enabled_sources:
             continue
         item = project_candidate(candidate, enabled_sources)
+        if not is_current_or_future_year_event(item, current_year):
+            continue
         if item["item_id"] in items_by_id:
             raise CollectionError("collector state contains duplicate item IDs")
         items_by_id[item["item_id"]] = item
 
-    run_timestamp = latest_run.get("started_at")
-    try:
-        datetime.fromisoformat(run_timestamp.replace("Z", "+00:00"))
-    except (AttributeError, TypeError, ValueError) as error:
-        raise CollectionError("collector run timestamp is invalid") from error
-    generated_time = generated_at or datetime.now(timezone.utc)
     source_results = latest_run.get("source_results")
     if not isinstance(source_results, list):
         raise CollectionError("collector source results are missing")
@@ -122,10 +134,7 @@ def build_public_feed(
         "source_results": public_source_results,
         "items": sorted(
             items_by_id.values(),
-            key=lambda item: (
-                item["publication_date"] or "",
-                item["item_id"],
-            ),
+            key=lambda item: event_sort_key(item, reference_date),
             reverse=True,
         ),
     }
