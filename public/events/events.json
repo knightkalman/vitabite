@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-11-01T18:11:47Z",
-  "last_successful_collection": "2026-11-01T18:11:38Z",
+  "generated_at": "2026-11-02T06:44:38Z",
+  "last_successful_collection": "2026-11-02T06:44:33Z",
   "collection_status": "success",
   "sources_succeeded": 7,
   "sources_total": 7,
@@ -29,25 +29,25 @@
       "source_id": "pubmed_events_europe",
       "status": "success",
       "fetched": 11,
-      "new": 9
+      "new": 0
     },
     {
       "source_id": "pubmed_events_us",
       "status": "success",
       "fetched": 3,
-      "new": 3
+      "new": 0
     },
     {
       "source_id": "pubmed_events_asia",
       "status": "success",
       "fetched": 20,
-      "new": 18
+      "new": 4
     },
     {
       "source_id": "pubmed_events_global",
       "status": "success",
       "fetched": 25,
-      "new": 19
+      "new": 0
     }
   ],
   "items": [
@@ -212,25 +212,6 @@
       "tags": [
         "consensus",
         "event",
-        "needs_review"
-      ],
-      "summary": null,
-      "evidence_notes": null,
-      "review_state": "candidate"
-    },
-    {
-      "item_id": "3c4ba7ee8f940e87c11803683b8095683fd8c302bdee2d309a20de3f27aaecab",
-      "title": "Bringing usability testing to the front lines: IV smart pump evaluation with critical care nurses at a national conference.",
-      "publisher": "MethodsX",
-      "author": "Nyarko BA",
-      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42751129",
-      "publication_date": null,
-      "publication_date_precision": "month",
-      "publication_date_raw": "2026 Dec",
-      "location": "other",
-      "location_groups": [],
-      "tags": [
-        "conference",
         "needs_review"
       ],
       "summary": null,
@@ -689,6 +670,28 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "0e985462a436f6e806dc4c22c2965e934b9f998ea091744eebc2281bc2698e83",
+      "title": "Health, Justice, and Community: Findings from Rhode Island's Health and Justice Research Symposium.",
+      "publisher": "Rhode Island medical journal (2013)",
+      "author": "Berk J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42945524",
+      "publication_date": "2026-11-02",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 2",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "needs_review",
+        "symposium",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "99d57104291ab4c065f7d080ec3f1989af3e99035b2680ff938efc87e3a12c88",
       "title": "Consensus guidelines in the management of paediatric flexible flatfoot : a Delphi study of the British Society of Children's Orthopaedic Surgery.",
       "publisher": "The bone & joint journal",
@@ -950,8 +953,8 @@
       "publisher": "The Gerontologist",
       "author": "Perone AK",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42904698",
-      "publication_date": "2026-10-21",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Oct 21",
       "location": "other",
       "location_groups": [],
@@ -1060,6 +1063,30 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "6a63b5b75db8812ed30b07e0663037dbf8e1c7d85a0238976b253683cc82b0dd",
+      "title": "Jahrestagung der Deutschen, Österreichischen und Schweizerischen Gesellschaften für Hämatologie und Medizinische Onkologie: Wien, Österreich, 9. bis 12. Oktober 2026: ABSTRACTS.",
+      "publisher": "Oncology research and treatment",
+      "author": null,
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42848726",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "1acc6f18801db7ee6ace0aed627561cbc393b0bc30f2a7ad5d1326deb6b2278f",
       "title": "[Perimenopause and postmenopause: acute diagnostic and therapeutic aspects for the DACH region : Consensus paper of the Austrian Society for Gynecology and Obstetrics (OEGGG), the German Society for Gynecology and Obstetrics (DGGG), the German Menopause Society (DMG) and the Swiss Society for Gynecology and Obstetrics (SGGG)].",
       "publisher": "Wiener klinische Wochenschrift",
@@ -1115,7 +1142,7 @@
       "author": "Alshami J",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42388534",
       "publication_date": null,
-      "publication_date_precision": "month",
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jul-Sep",
       "location": "us",
       "location_groups": [
@@ -1327,8 +1354,8 @@
       "publisher": "Immunology and cell biology",
       "author": "Stanisic DI",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42811617",
-      "publication_date": "2026-09-29",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Sep 29",
       "location": "other",
       "location_groups": [],
@@ -1372,8 +1399,8 @@
       "publisher": "JAMA",
       "author": "Song Z",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42636013",
-      "publication_date": "2026-09-22",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Sep 22",
       "location": "us",
       "location_groups": [
@@ -1408,6 +1435,28 @@
         "event",
         "needs_review",
         "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "d6fd7f8abaeb4e28900346345d4391a501b167f03afaa2e9ea609749822d7f9a",
+      "title": "International Society of Urological Pathology Multidisciplinary Expert Consultation Conference on Evaluation of Treatment Effects in Prostate and Bladder Cancer: Working Group 2: The Urinary Bladder.",
+      "publisher": "The American journal of surgical pathology",
+      "author": "Downes MR",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42682094",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "publication_date_raw": "2026 Sep 2",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "conference",
+        "needs_review",
+        "us"
       ],
       "summary": null,
       "evidence_notes": null,
@@ -1585,8 +1634,8 @@
       "publisher": "Zhonghua yi xue za zhi",
       "author": "Varicella and Herpes Zoster Prevention and Control Branch of the China Association for Vaccines",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42595507",
-      "publication_date": "2026-08-18",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Aug 18",
       "location": "asia",
       "location_groups": [
@@ -1608,8 +1657,8 @@
       "publisher": "Journal of clinical medicine",
       "author": "Antonazzo B",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42652707",
-      "publication_date": "2026-08-14",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Aug 14",
       "location": "europe",
       "location_groups": [
@@ -1632,8 +1681,8 @@
       "publisher": "Geriatrie et psychologie neuropsychiatrie du vieillissement",
       "author": "Annweiler C",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42592730",
-      "publication_date": "2026-08-13",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Aug 13",
       "location": "europe",
       "location_groups": [
@@ -1655,8 +1704,8 @@
       "publisher": "Gerontology & geriatrics education",
       "author": "Washington TR",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42563377",
-      "publication_date": "2026-08-06",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Aug 6",
       "location": "other",
       "location_groups": [],
@@ -1675,8 +1724,8 @@
       "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
       "author": "Choi EY",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42334962",
-      "publication_date": "2026-07-01",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jul 1",
       "location": "other",
       "location_groups": [],
@@ -1715,8 +1764,8 @@
       "publisher": "Zhonghua shao shang yu chuang mian xiu fu za zhi",
       "author": "Burns and Trauma Branch of Chinese Geriatrics Society",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42373501",
-      "publication_date": "2026-06-20",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jun 20",
       "location": "asia",
       "location_groups": [
@@ -1738,8 +1787,8 @@
       "publisher": "Menopause (New York, N.Y.)",
       "author": "Shillito J",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42299899",
-      "publication_date": "2026-06-16",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jun 16",
       "location": "us",
       "location_groups": [
@@ -1762,8 +1811,8 @@
       "publisher": "The Journal of craniofacial surgery",
       "author": "Hwang K",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/40601610",
-      "publication_date": "2026-06-01",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jun 1",
       "location": "europe",
       "location_groups": [
@@ -1785,8 +1834,8 @@
       "publisher": "Journal of hypertension",
       "author": "Coca A",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41875318",
-      "publication_date": "2026-06-01",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jun 1",
       "location": "us",
       "location_groups": [
@@ -1856,8 +1905,8 @@
       "publisher": "Bioscience trends",
       "author": "Xia Y",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41621920",
-      "publication_date": "2026-05-17",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 May 17",
       "location": "asia",
       "location_groups": [
@@ -1880,8 +1929,8 @@
       "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
       "author": "Byun JY",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41872027",
-      "publication_date": "2026-05-07",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 May 7",
       "location": "other",
       "location_groups": [],
@@ -1895,13 +1944,37 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "bffef83b70a980198ec1c33d37a9bbf446405cf99bacff91290400949de75900",
+      "title": "Meeting Report: Fourth Correlates of Protection for Next Generation Influenza Vaccines.",
+      "publisher": "Influenza and other respiratory viruses",
+      "author": "Tscherne A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41952426",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Apr",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "meeting",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "3ce1a421398c70fbbcc93af45be01af80d212d6d4cc3f1ad3419a4ad1abcb8b0",
       "title": "[The European Society for Clinical Nutrition and Metabolism (ESPEN) Guideline on Clinical Nutrition and Hydration in Geriatrics].",
       "publisher": "Revista espanola de geriatria y gerontologia",
       "author": "Volkert D",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41820196",
       "publication_date": null,
-      "publication_date_precision": "month",
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Mar-Apr",
       "location": "europe",
       "location_groups": [
@@ -1925,8 +1998,8 @@
       "publisher": "Endocrine",
       "author": "Ida S",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42043627",
-      "publication_date": "2026-04-27",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Apr 27",
       "location": "asia",
       "location_groups": [
@@ -1949,8 +2022,8 @@
       "publisher": "Nutricion hospitalaria",
       "author": "Volkert D",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41810828",
-      "publication_date": "2026-04-23",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Apr 23",
       "location": "europe",
       "location_groups": [
@@ -1974,8 +2047,8 @@
       "publisher": "Zhonghua jie he he hu xi za zhi = Zhonghua jiehe he huxi zazhi = Chinese journal of tuberculosis and respiratory diseases",
       "author": "Task Forces on Pulmonary Function Testing from Chinese Association of Chest Physicians (CACP)",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41912385",
-      "publication_date": "2026-04-12",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Apr 12",
       "location": "asia",
       "location_groups": [
@@ -2044,8 +2117,8 @@
       "publisher": "Zhonghua yi xue za zhi",
       "author": "Zhang J",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41912398",
-      "publication_date": "2026-03-31",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Mar 31",
       "location": "asia",
       "location_groups": [
@@ -2089,8 +2162,8 @@
       "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
       "author": "Zhang L",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41692982",
-      "publication_date": "2026-03-10",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Mar 10",
       "location": "asia",
       "location_groups": [
@@ -2130,6 +2203,30 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "768e341cb2ed6ddf2aeef2b4867eaff1b2753ac5664f5aee7706c046c53865d0",
+      "title": "Traveling sustainably to and from the EAPS Congress Vienna- a pediatric researcher's experience.",
+      "publisher": "Pediatric research",
+      "author": "Herrmann ML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40610710",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Feb",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "congress",
+        "europe",
+        "needs_review",
+        "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "17817c28962281596dcfa2221cce0e0a7635ebdb7120380590ea730e3a67f830",
       "title": "Blending Life and the Scalpel: A Financial Literacy Workshop for the Transition Beyond Training.",
       "publisher": "The Journal of surgical research",
@@ -2154,8 +2251,8 @@
       "publisher": "The journals of gerontology. Series A, Biological sciences and medical sciences",
       "author": "Sturmlechner I",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41429578",
-      "publication_date": "2026-02-05",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Feb 5",
       "location": "us",
       "location_groups": [
@@ -2219,8 +2316,8 @@
       "publisher": "Zhonghua yi xue za zhi",
       "author": "Geriatric Medicine Branch, China Association of Gerontology and Geriatrics",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/41314700",
-      "publication_date": "2026-01-06",
-      "publication_date_precision": "day",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
       "publication_date_raw": "2026 Jan 6",
       "location": "asia",
       "location_groups": [
@@ -2275,6 +2372,29 @@
         "event",
         "needs_review",
         "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "ab94ca7bb345a7b53b8d8e7fc0dd6ab0ebe2b57d6caa11bff19478e60728b1bb",
+      "title": "The 19th St. Gallen international breast cancer conference 'primary therapy of patients with early breast cancer. Evidence, controversies, consensus': key moments and breakthroughs.",
+      "publisher": "Ecancermedicalscience",
+      "author": "Morigi C",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41877749",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "conference",
+        "consensus",
+        "europe",
+        "needs_review"
       ],
       "summary": null,
       "evidence_notes": null,
