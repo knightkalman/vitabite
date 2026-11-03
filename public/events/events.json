@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-11-02T06:44:38Z",
-  "last_successful_collection": "2026-11-02T06:44:33Z",
+  "generated_at": "2026-11-03T06:38:59Z",
+  "last_successful_collection": "2026-11-03T06:38:53Z",
   "collection_status": "success",
   "sources_succeeded": 7,
   "sources_total": 7,
@@ -17,13 +17,13 @@
       "source_id": "pubmed_events_upcoming",
       "status": "success",
       "fetched": 30,
-      "new": 29
+      "new": 4
     },
     {
       "source_id": "pubmed_events_vienna",
       "status": "success",
       "fetched": 25,
-      "new": 25
+      "new": 0
     },
     {
       "source_id": "pubmed_events_europe",
@@ -41,7 +41,7 @@
       "source_id": "pubmed_events_asia",
       "status": "success",
       "fetched": 20,
-      "new": 4
+      "new": 0
     },
     {
       "source_id": "pubmed_events_global",
@@ -670,6 +670,26 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "9e113cef465583745939e321f1a20b9502e8f1c2aefd73bd847fcd03f2cffa76",
+      "title": "Consensus on Core Competencies of Undergraduate Life Sciences Students for Entry-Level Participation in Clinical Trials: RAND-Modified Delphi Study.",
+      "publisher": "JMIR human factors",
+      "author": "Cano Á",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42970783",
+      "publication_date": "2026-11-02",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 2",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "0e985462a436f6e806dc4c22c2965e934b9f998ea091744eebc2281bc2698e83",
       "title": "Health, Justice, and Community: Findings from Rhode Island's Health and Justice Research Symposium.",
       "publisher": "Rhode Island medical journal (2013)",
@@ -707,6 +727,72 @@
       "tags": [
         "consensus",
         "europe",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "758b773c1c75ea3b5db2fac16b619f1be3aff183cdb179885da9ab28394732be",
+      "title": "Consensus recommendations on diagnosis and management of posterior reversible encephalopathy syndrome in paediatric haematopoietic stem cell transplantation.",
+      "publisher": "British journal of haematology",
+      "author": "Leardini D",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42968593",
+      "publication_date": "2026-11-01",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 1",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "63e445d98e308ba11f9be1863057aed0b37cb09297b8098c196dc3a4f8521d29",
+      "title": "Structured reporting of diagnostic hysteroscopy findings in women with reproductive disorders: an ESGE-ESHRE-IFFS international consensus†ǂ.",
+      "publisher": "Human reproduction (Oxford, England)",
+      "author": "International Hysteroscopy Working Group of ESGE, ESHRE and IFFS",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42862606",
+      "publication_date": "2026-11-01",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 1",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "4fd8e94d74f05bd86b162dca73d90a5827e4a6015dad6d73727901063925df2d",
+      "title": "Resource utilization and costs of managing severe adverse events associated with chemotherapy and immunotherapy in lung cancer: a consensus-based microcosting study in Jordan.",
+      "publisher": "Expert review of pharmacoeconomics & outcomes research",
+      "author": "Madae'en S",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42968522",
+      "publication_date": "2026-11-01",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 1",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
         "event",
         "needs_review"
       ],
