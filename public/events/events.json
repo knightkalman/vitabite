@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-11-03T06:38:59Z",
-  "last_successful_collection": "2026-11-03T06:38:53Z",
+  "generated_at": "2026-11-04T06:44:12Z",
+  "last_successful_collection": "2026-11-04T06:44:07Z",
   "collection_status": "success",
   "sources_succeeded": 7,
   "sources_total": 7,
@@ -17,7 +17,7 @@
       "source_id": "pubmed_events_upcoming",
       "status": "success",
       "fetched": 30,
-      "new": 4
+      "new": 8
     },
     {
       "source_id": "pubmed_events_vienna",
@@ -416,11 +416,51 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "a7c9b93cdd7f25f996a5d912ded6e654f25211e089ace3ab2f764d723d157964",
+      "title": "Endovascular Therapy in Intracranial Atherosclerotic Stenosis-Related Large Vessel Occlusion Stroke: A Brief Practice Update and Consensus Statement From the SVIN.",
+      "publisher": "Stroke (Hoboken, N.J.)",
+      "author": "Al Kasab S",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42974351",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Nov",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "a0ca5d3c368a6f410dbc67caaefa82a4affc1e59b45e4faccf73824d2f3b450d",
       "title": "Comparison of recommendations for initial adult traumatic brain injury management across clinical practice guidelines and consensus statements: a scoping review.",
       "publisher": "Brain injury",
       "author": "Arias-Obando A",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42817860",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Nov",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "9ca2999fa458cbf93653f5e14a7b35cd3b8b0486e55c5798ab167cd74c0c0afd",
+      "title": "Consensus and persistent uncertainty in fetal ventriculomegaly: Delphi study mapping unresolved clinical domains and research priorities.",
+      "publisher": "Ultrasound in obstetrics & gynecology : the official journal of the International Society of Ultrasound in Obstetrics and Gynecology",
+      "author": "Pagani G",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42954436",
       "publication_date": null,
       "publication_date_precision": "month",
       "publication_date_raw": "2026 Nov",
@@ -591,6 +631,26 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "2d06997d00240121136cd1a0b53188c0afc4239617fa04b8f09a74d4f33f4d58",
+      "title": "[Expert consensus on multidisciplinary sequential diagnosis and treatment of sleep-disordered breathing in children].",
+      "publisher": "Lin chuang er bi yan hou tou jing wai ke za zhi = Journal of clinical otorhinolaryngology head and neck surgery",
+      "author": "Otorhinolaryngology Subspecialty Group and Stomatology Subspecialty Group",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42973022",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Nov",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "23e62ef18a3edb0c40909b67ed7cc4b8f0b57cb114231c57b03d861d0c7ffb3e",
       "title": "Defining the clinical benefits of disease-modifying therapy in people living with spinal muscular atrophy who require permanent ventilation: a UK-based modified Delphi consensus process.",
       "publisher": "EClinicalMedicine",
@@ -670,11 +730,74 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "9cdb18a16dab565b14fb9724eb2248cdafc8b608a0b47ee18072f6a853dec977",
+      "title": "Advances in HIV-associated pulmonary diseases: an official American Thoracic Society workshop report.",
+      "publisher": "Annals of the American Thoracic Society",
+      "author": "North CM",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42974962",
+      "publication_date": "2026-11-03",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 3",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "needs_review",
+        "us",
+        "workshop"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "21cca4089818236f1d4947f48a678b452826c76d11c91afb5245a9d3ef440c6b",
+      "title": "Recommendations for the use of semaglutide for the management of obesity in children and young people in England: expert consensus statements using a Delphi-like process.",
+      "publisher": "Archives of disease in childhood",
+      "author": "Lim DBN",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42977490",
+      "publication_date": "2026-11-03",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 3",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "9e113cef465583745939e321f1a20b9502e8f1c2aefd73bd847fcd03f2cffa76",
       "title": "Consensus on Core Competencies of Undergraduate Life Sciences Students for Entry-Level Participation in Clinical Trials: RAND-Modified Delphi Study.",
       "publisher": "JMIR human factors",
       "author": "Cano Á",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42970783",
+      "publication_date": "2026-11-02",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 2",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "4cb386f9b803d279f6b74d678b8f88aeda7aad508ac46d20951cd676dd535fd3",
+      "title": "Managing Small Intestinal Bacterial Overgrowth in Pediatric Short Bowel Syndrome: A Consensus Statement.",
+      "publisher": "JAMA network open",
+      "author": "Zong W",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42975907",
       "publication_date": "2026-11-02",
       "publication_date_precision": "day",
       "publication_date_raw": "2026 Nov 2",
@@ -786,6 +909,26 @@
       "publisher": "Expert review of pharmacoeconomics & outcomes research",
       "author": "Madae'en S",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42968522",
+      "publication_date": "2026-11-01",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 1",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "0048a5b94088d74874f07d34eba31fd466a9a9f7aaf9eb3567999909db60822d",
+      "title": "Evaluating the Clinical Efficacy, Utility, and Role of the 40-Gene Expression Profiling Test in Assessing Prognosis of Cutaneous Squamous Cell Carcinoma: An Expert Consensus Panel.",
+      "publisher": "Journal of drugs in dermatology : JDD",
+      "author": "Burshtein J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42976841",
       "publication_date": "2026-11-01",
       "publication_date_precision": "day",
       "publication_date_raw": "2026 Nov 1",
@@ -2565,6 +2708,26 @@
         "hybrid_or_online",
         "needs_review",
         "vienna"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "172bf79644124c3d0fee649109cf4260dc41e64293c27fe8139607478dd6a2e5",
+      "title": "Diagnosis, Rehabilitation, and Return to Sport after Athletic Hamstring Injury: An ICCUS Society Consensus Statement.",
+      "publisher": "International journal of sports physical therapy",
+      "author": "Gilliam B",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42974573",
+      "publication_date": null,
+      "publication_date_precision": "year",
+      "publication_date_raw": "2026",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
       ],
       "summary": null,
       "evidence_notes": null,
