@@ -1,41 +1,51 @@
 {
   "schema_version": 1,
   "publication_status": "metadata_roundup",
-  "generated_at": "2026-11-05T06:44:04Z",
-  "last_successful_collection": "2026-11-05T06:43:25Z",
+  "generated_at": "2026-11-06T06:44:50Z",
+  "last_successful_collection": "2026-11-06T06:44:44Z",
   "collection_status": "partial",
-  "sources_succeeded": 1,
+  "sources_succeeded": 6,
   "sources_total": 7,
   "source_results": [
     {
       "source_id": "nature_aging_events",
-      "status": "success",
-      "fetched": 0,
-      "new": 0
+      "status": "failed"
     },
     {
       "source_id": "pubmed_events_upcoming",
-      "status": "failed"
+      "status": "success",
+      "fetched": 30,
+      "new": 8
     },
     {
       "source_id": "pubmed_events_vienna",
-      "status": "failed"
+      "status": "success",
+      "fetched": 25,
+      "new": 1
     },
     {
       "source_id": "pubmed_events_europe",
-      "status": "failed"
+      "status": "success",
+      "fetched": 11,
+      "new": 0
     },
     {
       "source_id": "pubmed_events_us",
-      "status": "failed"
+      "status": "success",
+      "fetched": 3,
+      "new": 0
     },
     {
       "source_id": "pubmed_events_asia",
-      "status": "failed"
+      "status": "success",
+      "fetched": 20,
+      "new": 0
     },
     {
       "source_id": "pubmed_events_global",
-      "status": "failed"
+      "status": "success",
+      "fetched": 25,
+      "new": 0
     }
   ],
   "items": [
@@ -334,6 +344,25 @@
         "consensus",
         "event",
         "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "d1af737f8c30828a1985e1a374987a4564addc451ca86bf3ff2340eab1267eed",
+      "title": "Strengthening community engagement for the control of Aedes-borne diseases: Insights from an international workshop in Rio de Janeiro, Brazil.",
+      "publisher": "PLoS neglected tropical diseases",
+      "author": "Poinsignon A",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42981355",
+      "publication_date": null,
+      "publication_date_precision": "month",
+      "publication_date_raw": "2026 Nov",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "needs_review",
+        "workshop"
       ],
       "summary": null,
       "evidence_notes": null,
@@ -718,6 +747,90 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "fe4b12df8003602a1207300e1bf315aa69894f722224857e0b1fd5cbe71d7706",
+      "title": "Developing content validity of a questionnaire exploring various relationships with one's body in obesity: A Delphi expert consensus.",
+      "publisher": "Obesity research & clinical practice",
+      "author": "Foucaut AM",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42988700",
+      "publication_date": "2026-11-05",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 5",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review",
+        "nutrition"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "82407cb61c59fb102d33edab42e92a6de7683f65f8e706798c757f4265c8855c",
+      "title": "Evidence-based clinical practice national guideline for elective female genital aesthetic labiaplasty: recommendations from the pelvic floor and cosmetic gynecology (PETKOZ) association and expert consensus.",
+      "publisher": "Journal of the Turkish German Gynecological Association",
+      "author": "Doğan O",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42985885",
+      "publication_date": "2026-11-05",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 5",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "645650110b4bb08491942e255942e6e4d970bee6f9f47b5a793b21e87768ba37",
+      "title": "Consensus on a core outcome set for ventilation trials in critically ill patients with acute brain injury: results of an international Delphi consensus study.",
+      "publisher": "Intensive care medicine",
+      "author": "Fong N",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42986439",
+      "publication_date": "2026-11-05",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 5",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "2d0927b91090272c6bb5aa99b489177508c78fd298fcbffaeb44671a0bb892ba",
+      "title": "Biomechanical Test Designs for Fixation of Traumatic Pubic Symphysis Diastasis: A Systematic Review of Key Methodological Choices in a Field Without Consensus.",
+      "publisher": "Annals of biomedical engineering",
+      "author": "van Wees S",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42980917",
+      "publication_date": "2026-11-04",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 4",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "9cdb18a16dab565b14fb9724eb2248cdafc8b608a0b47ee18072f6a853dec977",
       "title": "Advances in HIV-associated pulmonary diseases: an official American Thoracic Society workshop report.",
       "publisher": "Annals of the American Thoracic Society",
@@ -781,6 +894,49 @@
       "review_state": "candidate"
     },
     {
+      "item_id": "7da476cb057dba415d9e673a6020bd95f11c771a26b8e32f4a715680bbc965d8",
+      "title": "Establishing the Clinical Role of Digital Therapeutics in Major Depressive Disorder Treatment: A Consensus Panel Perspective.",
+      "publisher": "The Journal of clinical psychiatry",
+      "author": "Parikh SV",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42981370",
+      "publication_date": "2026-11-02",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 2",
+      "location": "other",
+      "location_groups": [],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "78b0e52f799593d7bf1dfc273e17d573b98b2a5aaea7dd03e5f38571ef7534a9",
+      "title": "Ketamine/Esketamine in Clinical Practice: Areas of Consensus and Nonconsensus from an American Society of Clinical Psychopharmacology (ASCP) Delphi Panel Task Force.",
+      "publisher": "The Journal of clinical psychiatry",
+      "author": "Sanacora G",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42981371",
+      "publication_date": "2026-11-02",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 2",
+      "location": "us",
+      "location_groups": [
+        "us"
+      ],
+      "tags": [
+        "consensus",
+        "event",
+        "needs_review",
+        "us"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
       "item_id": "4cb386f9b803d279f6b74d678b8f88aeda7aad508ac46d20951cd676dd535fd3",
       "title": "Managing Small Intestinal Bacterial Overgrowth in Pediatric Short Bowel Syndrome: A Consensus Statement.",
       "publisher": "JAMA network open",
@@ -795,6 +951,30 @@
         "consensus",
         "event",
         "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "3621f0a2a981a38ab355700a3c0dce68e4c57590c2a1ffaac1a0163253fe60b1",
+      "title": "Insulin therapy with enteral and parenteral nutrition: a consensus statement endorsed by the Swiss Society for Endocrinology and Diabetology and the Swiss Society for Clinical Nutrition and Metabolism.",
+      "publisher": "Swiss medical weekly",
+      "author": "König L",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42981478",
+      "publication_date": "2026-11-02",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Nov 2",
+      "location": "europe",
+      "location_groups": [
+        "europe"
+      ],
+      "tags": [
+        "consensus",
+        "europe",
+        "event",
+        "needs_review",
+        "nutrition"
       ],
       "summary": null,
       "evidence_notes": null,
@@ -1863,6 +2043,30 @@
         "consensus",
         "event",
         "needs_review"
+      ],
+      "summary": null,
+      "evidence_notes": null,
+      "review_state": "candidate"
+    },
+    {
+      "item_id": "1ca1190becd69369647dcbd4b9c559282f2bf3366f4550acced731e684439105",
+      "title": "Measuring premenstrual disorders in adolescence: prevalence of premenstrual syndrome and premenstrual dysphoric disorder and psychometric validation of the PMS-I-Y in a German-speaking sample.",
+      "publisher": "BMC women's health",
+      "author": "Geßner J",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42603788",
+      "publication_date": "2026-08-15",
+      "publication_date_precision": "day",
+      "publication_date_raw": "2026 Aug 15",
+      "location": "vienna",
+      "location_groups": [
+        "vienna",
+        "europe"
+      ],
+      "tags": [
+        "europe",
+        "event",
+        "needs_review",
+        "vienna"
       ],
       "summary": null,
       "evidence_notes": null,
